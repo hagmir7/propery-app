@@ -1,6 +1,3 @@
-@extends('layouts.base')
-
-@section('content')
 <section class="relative">
     {{-- Background Image --}}
     <picture class="absolute inset-0 w-full h-full">
@@ -24,7 +21,7 @@
         </div>
 
         {{-- Search Form --}}
-        <div class="max-w-4xl mx-auto px-4 pb-8 hidden lg:block">
+        <div class="max-w-4xl mx-auto px-4 pb-8">
             @livewire('filter-form')
         </div>
 
@@ -45,37 +42,3 @@
         </div>
     </div>
 </section>
-<div class="max-w-7xl mx-auto px-4 py-6">
-    <h1 class="text-xl md:text-2xl font-bold mb-4">Locations Vacances Maroc</h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        @foreach ($properties as $property)
-        <x-property-card :property="[
-                    'image' => Storage::url($property?->images?->first()?->path),
-                    'rating' => 9.8,
-                    'reviews_count' => 49,
-                    'city' => $property->city->name,
-                    'type' => $property->type,
-                    'title' => $property->title,
-                    'guests' => 4,
-                    'bedrooms' => 2,
-                    'bathrooms' => 2,
-                    'description' => Str::limit($property->description, 80, '...'),
-                    'price' => $property->price,
-                    'is_featured' => true,
-                    'search_dates' => '02/01 – 09/01',
-                    'total_price' => 3150,
-                    'nights' => 7
-                ]" />
-
-        @endforeach
-
-        {{-- Option 3: If you have data from controller --}}
-        {{-- @if(isset($properties))
-        @foreach($properties as $property)
-        <x-property-card :property="$property" />
-        @endforeach
-        @endif --}}
-    </div>
-</div>
-@endsection

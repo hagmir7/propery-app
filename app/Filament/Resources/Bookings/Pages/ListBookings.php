@@ -12,29 +12,9 @@ class ListBookings extends ListRecords
 {
     protected static string $resource = BookingResource::class;
 
-    protected function getHeaderActions(): array
-    {
-        return [
-            // CreateAction::make(),
-        ];
-    }
 
-    public function getTitle(): string | Htmlable
+    public function getTitle(): string|Htmlable
     {
-        if (filled(static::$title)) {
-            return new HtmlString(
-                '<h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100">'
-                    . static::getResource()::getModelLabel()
-                    . '</h1>'
-            );
-        }
-
-        return new HtmlString(
-            '<h1 class="text-2xl font-bold text-gray-white dark:text-gray-100">'
-                . __('filament-panels::resources/pages/create-record.title', [
-                    'label' => static::getResource()::getModelLabel(),
-                ])
-                . '</h1>'
-        );
+        return new HtmlString("<span style='font-size: 20px;'>{$this::getResource()::getModelLabel() } </span>");
     }
 }

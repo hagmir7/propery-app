@@ -7,6 +7,8 @@
         "dev": "vite"
     },
     "dependencies": {
+        "@fontsource-variable/outfit": "^5.2.8",
+        "@fontsource/momo-signature": "^5.2.1",
         "@tailwindcss/vite": "^4.1.17",
         "autoprefixer": "^10.4.20",
         "axios": "^1.7.4",

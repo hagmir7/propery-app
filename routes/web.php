@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $properties = Property::all();
+    return view('welcome', compact('properties'));
 })->name('home');

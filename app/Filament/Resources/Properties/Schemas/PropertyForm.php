@@ -83,8 +83,6 @@ class PropertyForm
                                             ->extraInputAttributes(['style' => 'min-height: 20rem; max-height: 50vh; overflow-y: auto;'])
                                             ->columnSpanFull()
                                             ->columnSpanFull(),
-
-
                                     ])
 
 
