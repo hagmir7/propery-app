@@ -15,10 +15,10 @@
 
         {{-- Title and Subtitle --}}
         <div class="text-center py-12 px-4">
-            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 text-border">
                 Airbnb et Locations Maroc
             </h1>
-            <p class="text-lg md:text-xl text-white/90">
+            <p class="text-lg md:text-2xl text-shadow-2xs text-white/90">
                 93750 offres de locations vacances disponibles
             </p>
         </div>
@@ -64,6 +64,7 @@
                     'price' => $property->price,
                     'is_featured' => true,
                     'search_dates' => '02/01 – 09/01',
+                    'slug' => $property->slug,
                     'total_price' => 3150,
                     'nights' => 7
                 ]" />
@@ -77,5 +78,7 @@
         @endforeach
         @endif --}}
     </div>
+
+    @livewire('contact-form')
 </div>
 @endsection

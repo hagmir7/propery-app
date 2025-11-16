@@ -57,18 +57,7 @@
 
             {{-- Right side (desktop) --}}
             <div class="hidden md:flex items-center gap-3">
-                {{-- Favorites --}}
-                <a href=""
-                    class="relative text-gray-600 hover:text-purple-600 transition-colors p-2.5 rounded-xl hover:bg-purple-50 group"
-                    title="Favoris">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                        </path>
-                    </svg>
-                    <span
-                        class="absolute -top-1 -right-1 bg-purple-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">3</span>
-                </a>
+
 
                 {{-- Profile / menu --}}
                 <div class="relative group">

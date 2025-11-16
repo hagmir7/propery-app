@@ -11,8 +11,13 @@ use Filament\Tables\Table;
 
 class BookingsTable
 {
+
+
+
     public static function configure(Table $table): Table
     {
+
+
         return $table
             ->columns([
                 TextColumn::make('property.title')
@@ -27,6 +32,7 @@ class BookingsTable
                     ->label(__("Téléphone"))
                     ->searchable(),
                 TextColumn::make('email')
+                    ->placeholder('__')
                     ->label('E-mail')
                     ->searchable(),
                 TextColumn::make('date')
@@ -35,6 +41,7 @@ class BookingsTable
 
                 SelectColumn::make('status')
                     ->label(__("État"))
+                    ->native(false)
                     ->options([1 => 'En attente', 2 => 'Confirmé', 3 => 'Annulé', 4 => 'Terminé'])
                     ->sortable(),
                 TextColumn::make('created_at')

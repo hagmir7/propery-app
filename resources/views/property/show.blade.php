@@ -1,0 +1,104 @@
+@extends('layouts.base')
+
+@section('content')
+
+<div class="bg-gray-50 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+
+            <!-- Main Content -->
+            <main class="lg:col-span-8">
+                <!-- Property Header -->
+                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                    <x-property-images :images="$property->images" />
+                    <div class="flex items-start justify-between mb-4 mt-3">
+                        <div>
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">
+                                {{ $property->title }}
+                            </h1>
+                            <p class="mb-2">{{ $property->description }}</p>
+                            <div class="flex items-center text-md text-gray-600">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C7.589 0 4 3.589 4 8c0 3.51 5 12.025 7.148 15.524A1 1 0 0012 24a.99.99 0 00.852-.477C15 20.026 20 11.514 20 8c0-4.411-3.589-8-8-8zm0 11.5A3.5 3.5 0 1115.5 8 3.5 3.5 0 0112 11.5z" />
+                                </svg>
+                                <span>{{ $property->city->name }}{{ $property->address ? ' ,'.  $property->address : ''}}, Maroc</span>
+                                {{-- <span class="mx-2">–</span>
+                                <a href="#map" class="text-blue-600 hover:underline">Voir la carte</a> --}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#booking"
+                        class="w-full inline-block text-center bg-blue-600  text-white py-3 rounded-md font-medium hover:bg-blue-700 transition-colors">
+                        Réservez une visite
+                    </a>
+                </div>
+
+                @if (count($property->features))
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-4">
+                    <div class="grid grid-cols-4 gap-2 p-2">
+                        @foreach ($property->features as $feature)
+                        <div class="col-span-2 md:col-span-1 border border-gray-300 rounded-md flex items-start space-x-3 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-wifi">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 18l.01 0" />
+                                <path d="M9.172 15.172a4 4 0 0 1 5.656 0" />
+                                <path d="M6.343 12.343a8 8 0 0 1 11.314 0" />
+                                <path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0" />
+                            </svg>
+                            <div>
+                                <p class="font-medium text-gray-900">{{ $feature->name }}</p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+
+                @endif
+
+                @if ($property->content)
+                    <!-- Property Description Section -->
+                    <div class="bg-white rounded-lg shadow-sm p-4">
+                        <h2 class="text-xl font-semibold mb-4">À propos de cet établissement</h2>
+                        <div class="prose max-w-none text-gray-700">
+                            {!! $property->content !!}
+                        </div>
+                    </div>
+                @endif
+
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4 space-y-4" id="booking">
+                <!-- Search Box -->
+                <div class="bg-white rounded-lg shadow-sm p-4">
+                    <h2 class="text-xl font-semibold mb-2 animate-shake-every-15s">
+                        Envoyer la réservation
+                    </h2>
+
+                    @livewire('booking-form', ['property' => $property], key($property->id))
+                </div>
+
+                <!-- Map Preview -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-60 bg-gray-200">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019257850829!2d-122.41941518468117!3d37.77492977975992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b12345678%3A0xabcdef123456!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        {{-- <button
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 hover:bg-opacity-50 transition-opacity">
+                            <span class="text-white font-medium">Voir sur la carte</span>
+                        </button> --}}
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+@endsection

@@ -61,12 +61,9 @@ class Property extends Model
     }
     public function features()
     {
-        return $this->belongsToMany(Feature::class);
+        return $this->belongsToMany(Feature::class, 'property_feature');
     }
-    public function favorites()
-    {
-        return $this->hasMany(Favorite::class);
-    }
+
 
     public function getSlugOptions(): SlugOptions
     {

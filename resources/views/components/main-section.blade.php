@@ -2,8 +2,8 @@
     {{-- Background Image --}}
     <picture class="absolute inset-0 w-full h-full">
         <source media="(max-width: 480px)"
-            srcset="https://static.cozycozy.com/images/catalog/bg/maroc-mobile-small.jpg">
-        <img src="https://static.cozycozy.com/images/catalog/bg/maroc.jpg" alt="location vacances Maroc"
+            srcset="/images/hero_casablancamorocco.jpg">
+        <img src="/images/hero_casablancamorocco.jpg" alt="location vacances Maroc"
             class="w-full h-full object-cover">
     </picture>
 

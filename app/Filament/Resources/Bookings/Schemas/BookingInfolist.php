@@ -7,28 +7,70 @@ use Filament\Schemas\Schema;
 
 class BookingInfolist
 {
+    protected static array $statusLabels = [
+        1 => 'En attente',
+        2 => 'Confirmé',
+        3 => 'Annulé',
+        4 => 'Terminé',
+    ];
+
+
     public static function configure(Schema $schema): Schema
     {
         return $schema
             ->components([
-                TextEntry::make('property_id')
-                    ->numeric(),
+
+                TextEntry::make('full_name')
+                    ->extraAttributes(['style' => 'font-size:18px'])
+                    ->label(__('Nom complet')),
+                TextEntry::make('property.title')
+                    ->extraAttributes(['style' => 'font-size:18px'])
+                    ->url(fn($record) => route('property.show', $record->property->slug))
+                    ->label(__('Propriété')),
+
                 TextEntry::make('date')
-                    ->date(),
-                TextEntry::make('phone'),
-                TextEntry::make('email')
-                    ->label('Email address'),
-                TextEntry::make('full_name'),
-                TextEntry::make('start_date')
-                    ->date(),
-                TextEntry::make('end_date')
-                    ->date(),
+                    ->extraAttributes(['style' => 'font-size:18px'])
+                    ->date()
+                    ->label(__('Date')),
+
+                TextEntry::make('phone')
+                    ->label(__('Téléphone'))
+                    ->extraAttributes(['style' => 'font-size:18px'])
+                    ->url(fn($record) => 'tel:' . $record->phone),
+
+
                 TextEntry::make('status')
-                    ->numeric(),
+                    ->extraAttributes(['style' => 'font-size:18px'])
+                    ->getStateUsing(fn($record) => self::$statusLabels[$record->status] ?? 'Inconnu')
+                    ->badge()
+                    ->label(__('Statut')),
+
+                TextEntry::make('email')
+                    ->placeholder('__')
+                    ->label(__('Adresse e-mail'))
+                    ->extraAttributes(['style' => 'font-size:18px'])
+                    ->url(fn($record) => 'mailto:' . $record->email),
+
+
+
+                // TextEntry::make('start_date')
+                //     ->extraAttributes(['style' => 'font-size:18px'])
+                //     ->placeholder('__')
+                //     ->date()
+                //     ->label(__('Date de début')),
+
+                // TextEntry::make('end_date')
+                //     ->placeholder('__')
+                //     ->extraAttributes(['style' => 'font-size:18px'])
+                //     ->date()
+                //     ->label(__('Date de fin')),
+
+
+
                 TextEntry::make('created_at')
-                    ->dateTime(),
-                TextEntry::make('updated_at')
-                    ->dateTime(),
+                    ->extraAttributes(['style' => 'font-size:18px'])
+                    ->dateTime()
+                    ->label(__('Créé le')),
             ]);
     }
 }

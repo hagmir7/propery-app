@@ -48,7 +48,7 @@ class ContactResource extends Resource
     {
         return [
             'index' => ListContacts::route('/'),
-            'view' => ViewContact::route('/{record}'),
+            // 'view' => ViewContact::route('/{record}'),
         ];
     }
 }

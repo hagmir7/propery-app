@@ -11,14 +11,26 @@ class ContactInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('full_name'),
-                TextEntry::make('subject'),
+                TextEntry::make('full_name')
+                    ->label(__('Nom complet'))
+                    ->extraAttributes(['style' => 'font-size:18px']),
+                TextEntry::make('subject')
+                    ->label(__('Sujet'))
+                    ->extraAttributes(['style' => 'font-size:18px']),
                 TextEntry::make('email')
-                    ->label('Email address'),
+                    ->label(__('Adresse e-mail'))
+                    ->url(fn($record) => 'mailto:' . $record->email)
+                    ->extraAttributes(['style' => 'font-size:18px']),
                 TextEntry::make('created_at')
-                    ->dateTime(),
-                TextEntry::make('updated_at')
-                    ->dateTime(),
+                    ->dateTime()
+                    ->label(__('Créé le'))
+                    ->extraAttributes(['style' => 'font-size:18px']),
+
+
+                TextEntry::make('message')
+                    ->columnSpanFull()
+                    ->label(__('Message'))
+                    ->extraAttributes(['style' => 'font-size:18px']),
             ]);
     }
 }

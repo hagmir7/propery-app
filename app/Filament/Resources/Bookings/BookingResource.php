@@ -47,7 +47,7 @@ class BookingResource extends Resource
     {
         return [
             'index' => ListBookings::route('/'),
-            'view' => ViewBooking::route('/{record}'),
+            // 'view' => ViewBooking::route('/{record}'),
         ];
     }
 }
