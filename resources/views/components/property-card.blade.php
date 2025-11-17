@@ -38,7 +38,6 @@
 
             {{-- Features --}}
             <div class="flex items-center gap-4 text-sm text-gray-600 mb-3 mt-2">
-                @if(isset($property['guests']))
                 <div class="flex items-center">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -46,29 +45,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    {{ $property['city'] }}
+                    {{ $property['city'] }}, Maroc
                 </div>
-                @endif
-
-                @if(isset($property['bedrooms']))
-                <div class="flex items-center">
-                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M20 9.557V3h-2v2H6V3H4v6.557C2.81 10.25 2 11.525 2 13v4a1 1 0 0 0 1 1h1v4h2v-4h12v4h2v-4h1a1 1 0 0 0 1-1v-4c0-1.475-.81-2.75-2-3.443zM18 7v1h-5V6h5v1zm-11 1V6h5v2H7z" />
-                    </svg>
-                    {{ $property['bedrooms'] }} chambres
-                </div>
-                @endif
-
-                @if(isset($property['bathrooms']))
-                <div class="flex items-center">
-                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 20H4v-3h3v3zm0-5H4v-3h3v3zm0-5H4V7h3v3zm6 10h-3v-3h3v3zm0-5h-3v-3h3v3zm0-5h-3V7h3v3zm6 10h-3v-3h3v3zm0-5h-3v-3h3v3zm0-5h-3V7h3v3z" />
-                    </svg>
-                    {{ $property['bathrooms'] }} sdb
-                </div>
-                @endif
             </div>
 
             {{-- Price --}}

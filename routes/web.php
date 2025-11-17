@@ -6,9 +6,46 @@ use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $properties = Property::all();
-    return view('welcome', compact('properties'));
+
+    $query = Property::query();
+
+    if (request()->filled('city')) {
+        $query->where('city_id', request('city'));
+    }
+
+    if (request()->filled('property_type')) {
+        $query->where('property_type_id', request('property_type'));
+    }
+
+    if (request()->filled('operation')) {
+        $query->where('operation_type', request('operation'));
+        // Example: 1 = Vente, 2 = Location
+    }
+
+    if (request()->filled('price_min')) {
+        $query->where('price', '>=', request('price_min'));
+    }
+
+    if (request()->filled('price_max')) {
+        $query->where('price', '<=', request('price_max'));
+    }
+
+    $properties = $query->get();
+    $cities = City::all()->map(function ($city) {
+        return ['value' => (string) $city->id, 'label' => $city->name];
+    })->toArray();
+
+    return view('welcome', compact('properties', 'cities'));
 })->name('home');
 
 
 Route::get('property/{property:slug}', [PropertyController::class, 'show'])->name('property.show');
+
+
+Route::get('/logout', function () {
+    Auth::logout();
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
+
+    return redirect('/');
+})->name('logout');

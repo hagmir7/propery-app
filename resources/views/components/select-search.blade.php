@@ -102,7 +102,7 @@
         @endif
 
         <button x-ref="selectButton" x-on:click="openMenu()" type="button"
-            class="outline-none bg-transparent text-gray-900 font-medium text-sm cursor-pointer text-left flex items-center justify-between w-full py-1">
+            class="outline-none bg-transparent text-gray-900 font-medium text-sm whitespace-nowrap cursor-pointer text-left flex items-center justify-between w-full py-1">
             <span x-text="selectedOption ? selectedOption.label : placeholderText"
                 x-bind:class="{ 'text-gray-400': !selectedOption }"></span>
             <svg class="w-4 h-4 whitespace-nowrap text-gray-400 ml-1 transition-transform" x-bind:class="{ 'rotate-180': open }"

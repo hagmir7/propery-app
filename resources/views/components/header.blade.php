@@ -8,7 +8,7 @@
 
             {{-- Left: Logo --}}
             <div class="flex items-center gap-3 flex-shrink-0">
-                <a href="" class="block group flex items-center gap-3">
+                <a href="/" class="block group flex items-center gap-3">
                     <div
                         class="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -16,7 +16,7 @@
                                 d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                         </svg>
                     </div>
-                    <span class="text-xl font-bold text-gray-900 tracking-tight">ImmoPro</span>
+                    <span class="text-2xl font-bold text-gray-900 tracking-tight">SAKANY</span>
                 </a>
             </div>
 
@@ -61,6 +61,8 @@
 
                 {{-- Profile / menu --}}
                 <div class="relative group">
+                    {{-- Dropdown menu (desktop) --}}
+                    @if (auth()->user())
                     <button
                         class="flex items-center gap-3 border border-gray-200 rounded-xl py-2 px-3 hover:shadow-md hover:border-gray-300 transition-all duration-200">
                         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -79,55 +81,53 @@
                         </div>
                     </button>
 
-                    {{-- Dropdown menu (desktop) --}}
-                    <div
-                        class="absolute right-0 mt-3 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 py-2">
-                        <div class="px-4 py-3 border-b border-gray-100">
-                            <p class="text-sm font-semibold text-gray-900">John Doe</p>
-                            <p class="text-xs text-gray-500 mt-0.5">john.doe@example.com</p>
+
+                        <div
+                            class="absolute right-0 mt-3 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 py-2">
+                            <div class="px-4 py-3 border-b border-gray-100">
+                                <p class="text-sm font-semibold text-gray-900">{{ auth()->user()->name }}</p>
+                                <p class="text-xs text-gray-500 mt-0.5">{{ auth()->user()->email }}</p>
+                            </div>
+
+                            <a href="/admi"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="icon icon-tabler icons-tabler-outline icon-tabler-layout-dashboard">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 4h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+                                    <path d="M5 16h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+                                    <path d="M15 12h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1" />
+                                    <path d="M15 4h4a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
+                                </svg>
+                                Tableau de bord
+                            </a>
+
+                            <a href="/admin/bookings"
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Réservations
+                            </a>
+
+
+                            <hr class="my-2 border-gray-100">
+
+                            <a href="/logout" class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                                    </path>
+                                </svg>
+                                Déconnexion
+                            </a>
                         </div>
+                    @endif
 
-                        <a href=""
-                            class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                            </svg>
-                            Mon profil
-                        </a>
-
-                        <a href=""
-                            class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                            Mes réservations
-                        </a>
-
-                        <a href=""
-                            class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                                </path>
-                            </svg>
-                            Mes favoris
-                        </a>
-
-                        <hr class="my-2 border-gray-100">
-
-                        <a href=""
-                            class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
-                                </path>
-                            </svg>
-                            Déconnexion
-                        </a>
-                    </div>
                 </div>
             </div>
 

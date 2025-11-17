@@ -1,14 +1,18 @@
 @extends('layouts.base')
 
 @section('content')
-<section class="relative">
+<section class="relative py-24">
     {{-- Background Image --}}
-    <picture class="absolute inset-0 w-full h-full">
+    <picture class="absolute inset-0 w-full h-full ">
         <source media="(max-width: 480px)"
             srcset="https://static.cozycozy.com/images/catalog/bg/maroc-mobile-small.jpg">
         <img src="https://static.cozycozy.com/images/catalog/bg/maroc.jpg" alt="location vacances Maroc"
             class="w-full h-full object-cover">
     </picture>
+
+    {{-- Dark Overlay --}}
+    <div class="absolute inset-0 bg-black/50"></div>
+    <!-- Change opacity: bg-black/40 bg-black/60 bg-black/70 -->
 
     {{-- Content Overlay --}}
     <div class="relative z-10">
@@ -16,32 +20,16 @@
         {{-- Title and Subtitle --}}
         <div class="text-center py-12 px-4">
             <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 text-border">
-                Airbnb et Locations Maroc
+                Trouvez votre futur bien immobilier
             </h1>
             <p class="text-lg md:text-2xl text-shadow-2xs text-white/90">
-                93750 offres de locations vacances disponibles
+                Vente et location <br> d’appartements, villas, maisons, terrains et locaux commerciaux.
             </p>
         </div>
 
         {{-- Search Form --}}
         <div class="max-w-4xl mx-auto px-4 pb-8 hidden lg:block">
             @livewire('filter-form')
-        </div>
-
-        {{-- Provider Logos --}}
-        <div class="pb-8 px-4">
-            <ul class="max-w-6xl mx-auto flex flex-wrap justify-center items-center gap-6 md:gap-8">
-                @foreach([
-                'airbnb', 'booking', 'gitesdefrance', 'abritel',
-                'pierreetvacances', 'odalys', 'tuivillas',
-                'skiplanet', 'belvilla', 'expedia', 'homestay'
-                ] as $provider)
-                <li class="h-8">
-                    <img src="https://www.cozycozy.com/assets/providers/white/{{ $provider }}.svg" alt="{{ $provider }}"
-                        loading="lazy" class="h-full w-auto opacity-90 hover:opacity-100 transition">
-                </li>
-                @endforeach
-            </ul>
         </div>
     </div>
 </section>

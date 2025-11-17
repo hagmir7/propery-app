@@ -1,4 +1,4 @@
-<form action="" method="GET"
+<form action="/" method="GET"
     class="flex items-center bg-gray-50/80 border border-gray-200 rounded-2xl hover:border-purple-300 hover:bg-white focus-within:border-purple-500 focus-within:bg-white focus-within:shadow-lg transition-all duration-300">
 
     {{-- City --}}
@@ -11,15 +11,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
         </svg>
         <div class="flex-1">
-            <x-select-search name="city" label="Ville" placeholder="Toutes les villes" :options="[
-                    ['label' => 'Nador', 'value' => 'nador'],
-                    ['label' => 'Casablanca', 'value' => 'casablanca'],
-                    ['label' => 'Rabat', 'value' => 'rabat'],
-                    ['label' => 'Marrakech', 'value' => 'marrakech'],
-                    ['label' => 'Tanger', 'value' => 'tanger'],
-                    ['label' => 'Fès', 'value' => 'fes'],
-                    ['label' => 'Agadir', 'value' => 'agadir'],
-                ]" :selected="request('city', '')" />
+            <x-select-search name="city" label="Ville" placeholder="Toutes les villes" :options="$cities"
+                :selected="request('city')" />
         </div>
     </div>
 
@@ -34,13 +27,13 @@
         </svg>
         <div class="flex-1">
             <x-select-search name="property_type" label="Type" placeholder="Tous" :options="[
-                    ['label' => 'Tous', 'value' => ''],
-                    ['label' => 'Appartement', 'value' => 'appartement'],
-                    ['label' => 'Villa', 'value' => 'villa'],
-                    ['label' => 'Maison', 'value' => 'maison'],
-                    ['label' => 'Terrain', 'value' => 'terrain'],
-                    ['label' => 'Local commercial', 'value' => 'local'],
-                ]" :selected="request('property_type', '')" />
+                    ['label' => 'Tout', 'value' => ''],
+                    ['label' => 'Appartement', 'value' => '1'],
+                    ['label' => 'Villa', 'value' => '2'],
+                    ['label' => 'Maison', 'value' => '3'],
+                    ['label' => 'Terrain', 'value' => '4'],
+                    ['label' => 'Local commercial', 'value' => '5'],
+                ]" :selected="request('property_type')" />
         </div>
     </div>
 
@@ -55,10 +48,10 @@
         </svg>
         <div class="flex-1">
             <x-select-search name="operation" label="Opération" placeholder="Tous" :options="[
-                    ['label' => 'Tous', 'value' => ''],
+                    ['label' => 'Tout', 'value' => ''],
                     ['label' => 'Vente', 'value' => '1'],
                     ['label' => 'Location', 'value' => '2'],
-                ]" :selected="request('operation', '')" />
+                ]" :selected="request('operation')" />
         </div>
     </div>
 
@@ -74,10 +67,12 @@
             <label class="text-sm md:text-md text-gray-500 font-semibold uppercase tracking-wider mb-0.5">Prix
                 (MAD)</label>
             <div class="flex items-center gap-2">
-                <input type="number" name="price_min" value="{{ request('price_min') }}" placeholder="Min" min="0"
+                <input type="number" name="price_min" value="{{ request('price_min') }}" placeholder="Min"
+                    min="0"
                     class="outline-none bg-transparent text-gray-900 font-medium text-sm w-20 md:w-24 placeholder:text-gray-400">
                 <span class="text-gray-300 font-medium">—</span>
-                <input type="number" name="price_max" value="{{ request('price_max') }}" placeholder="Max" min="0"
+                <input type="number" name="price_max" value="{{ request('price_max') }}" placeholder="Max"
+                    min="0"
                     class="outline-none bg-transparent text-gray-900 font-medium text-sm w-20 md:w-24 placeholder:text-gray-400">
             </div>
         </div>

@@ -1,4 +1,4 @@
-<div class="grid lg:grid-cols-2 items-start gap-16 p-6 mx-auto bg-white mt-5">
+<div class="grid lg:grid-cols-2 items-start gap-16 my-10 mx-auto bg-purple-50 rounded-2xl p-6 border-purple-600 border">
     <div>
         <h2 class="text-slate-900 text-3xl font-bold">Parlons-en</h2>
         <p class="text-[15px] text-slate-600 mt-4 leading-relaxed">Vous avez une grande idée ou une marque à développer
@@ -18,7 +18,7 @@
                     </div>
                     <a href="javascript:void(0)" class="text-sm ml-4">
                         <small class="block text-slate-900">Mail</small>
-                        <spane class="font-semibold text-blue-600">contact@example.com</spane>
+                        <spane class="font-semibold text-blue-600">contact@sakany.ma</spane>
                     </a>
                 </li>
             </ul>
@@ -27,7 +27,7 @@
         <div class="mt-12">
             <h2 class="text-slate-900 text-base font-semibold">Réseaux sociaux</h2>
             <ul class="flex mt-4 space-x-4">
-                <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full border border-purple-600 flex items-center justify-center shrink-0">
                     <a href="javascript:void(0)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                             viewBox="0 0 24 24">
@@ -37,17 +37,8 @@
                         </svg>
                     </a>
                 </li>
-                <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                    <a href="javascript:void(0)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
-                            viewBox="0 0 511 512">
-                            <path
-                                d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                                data-original="#000000" />
-                        </svg>
-                    </a>
-                </li>
-                <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+
+                <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full border border-purple-600 flex items-center justify-center shrink-0">
                     <a href="javascript:void(0)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                             viewBox="0 0 24 24">
@@ -68,16 +59,16 @@
         </div>
         @endif
         <input wire:model='full_name' type='text' placeholder='Nom'
-            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent" />
+            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 border-gray-200 focus:border-slate-900 outline-none" />
             @error('full_name') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <input type='email' wire:model='email' placeholder='Email'
-            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent" />
+            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 border-gray-200 focus:border-slate-900 outline-none" />
             @error('email') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <input wire:model='subject' type='text' placeholder='Sujet'
-            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-sm border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent" />
+            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 border-gray-200 focus:border-slate-900 outline-none" />
             @error('subject') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <textarea wire:model='message' placeholder='Message' rows="6"
-            class="w-full rounded-md px-4 bg-slate-100 text-slate-900 text-sm pt-3 border border-gray-200 focus:border-slate-900 outline-none focus:bg-transparent"></textarea>
+            class="w-full rounded-md px-4 bg-slate-100 text-slate-900 text-md pt-3 border-2 border-gray-200 focus:border-slate-900 outline-none"></textarea>
             @error('message') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <div class="flex justify-center">
             <button type="submit"
