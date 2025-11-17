@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\PropertyController;
 use App\Models\City;
 use App\Models\Property;
@@ -40,6 +41,7 @@ Route::get('/', function () {
 
 
 Route::get('property/{property:slug}', [PropertyController::class, 'show'])->name('property.show');
+Route::get('page/{page:slug}', [PageController::class, 'show'])->name('page.show');
 
 
 Route::get('/logout', function () {
