@@ -56,9 +56,7 @@
             </div>
 
             {{-- Right side (desktop) --}}
-            <div class="hidden md:flex items-center gap-3">
-
-
+            <div class="hidden md:flex items-center gap-3 z-50">
                 {{-- Profile / menu --}}
                 <div class="relative group">
                     {{-- Dropdown menu (desktop) --}}
