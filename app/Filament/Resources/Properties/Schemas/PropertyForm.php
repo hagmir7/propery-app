@@ -34,6 +34,7 @@ class PropertyForm
                                             ->required(),
                                         Select::make('city_id')
                                             ->label(__("Ville"))
+                                            ->required()
                                             ->relationship('city', 'name')
                                             ->searchable()
                                             ->preload(),
