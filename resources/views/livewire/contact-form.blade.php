@@ -59,16 +59,16 @@
         </div>
         @endif
         <input wire:model='full_name' type='text' placeholder='Nom'
-            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 border-gray-200 focus:border-slate-900 outline-none" />
+            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 mt-2 mb-0 border-gray-200 focus:border-slate-900 outline-none" />
             @error('full_name') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <input type='email' wire:model='email' placeholder='Email'
-            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 border-gray-200 focus:border-slate-900 outline-none" />
+            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 mt-2 mb-0 border-gray-200 focus:border-slate-900 outline-none" />
             @error('email') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <input wire:model='subject' type='text' placeholder='Sujet'
-            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 border-gray-200 focus:border-slate-900 outline-none" />
+            class="w-full rounded-md py-3 px-4 bg-slate-100 text-slate-900 text-md border-2 mt-2 mb-0 border-gray-200 focus:border-slate-900 outline-none" />
             @error('subject') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <textarea wire:model='message' placeholder='Message' rows="6"
-            class="w-full rounded-md px-4 bg-slate-100 text-slate-900 text-md pt-3 border-2 border-gray-200 focus:border-slate-900 outline-none"></textarea>
+            class="w-full rounded-md px-4 bg-slate-100 text-slate-900 text-md pt-3 border-2 mt-2 mb-0 border-gray-200 focus:border-slate-900 outline-none"></textarea>
             @error('message') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <div class="flex justify-center">
             <button type="submit"

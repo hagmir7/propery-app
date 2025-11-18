@@ -67,6 +67,25 @@
                         <div class="prose max-w-none text-gray-700">
                             {!! $property->content !!}
                         </div>
+
+                        @if ($property->extra)
+                        <div class="relative overflow-x-auto border-t-2 border-x-2 sm:rounded-lg mt-4">
+                            <table class="w-full text-sm text-left rtl:text-right">
+                                <tbody>
+                                    @foreach ($property->extra as $key => $value)
+                                    <tr class="border-b-2 font-semibold hover:bg-gray-50 duration-500">
+                                        <th scope="row" class="px-6 py-4 text-gray-900 whitespace-nowrap">
+                                            {{ $key }}
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            {{ $value }}
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        @endif
                     </div>
                 @endif
 

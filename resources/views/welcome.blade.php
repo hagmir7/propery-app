@@ -36,6 +36,7 @@
 <div class="max-w-7xl mx-auto px-4 py-6">
     <h1 class="text-xl md:text-2xl font-bold mb-4">Locations Vacances Maroc</h1>
 
+    @if($properties && $properties->count() > 0)
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach ($properties as $property)
         <x-property-card :property="[
@@ -56,16 +57,48 @@
                     'total_price' => 3150,
                     'nights' => 7
                 ]" />
-
         @endforeach
-
-        {{-- Option 3: If you have data from controller --}}
-        {{-- @if(isset($properties))
-        @foreach($properties as $property)
-        <x-property-card :property="$property" />
-        @endforeach
-        @endif --}}
     </div>
+
+    <!-- Pagination -->
+    <div class="mt-8">
+        {{ $properties->links() }}
+    </div>
+    @else
+    <div class="flex flex-col items-center justify-center py-16 px-4">
+        <!-- Icon -->
+        <div class="mb-6">
+            <svg class="w-24 h-24 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                </path>
+            </svg>
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-xl font-semibold text-gray-700 mb-2">
+            Aucune propriété disponible
+        </h3>
+
+        <!-- Description -->
+        <p class="text-gray-500 text-center max-w-md mb-6">
+            Nous n'avons trouvé aucune propriété correspondant à vos critères. Essayez de modifier vos filtres ou
+            revenez
+            plus tard.
+        </p>
+
+        <!-- Optional Action Button -->
+        <a href=""
+            class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            Voir toutes les propriétés
+        </a>
+    </div>
+    @endif
 
     @livewire('contact-form')
 </div>

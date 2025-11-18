@@ -86,10 +86,10 @@
     }
   }" class="relative w-full">
     <!-- Hidden native select for form submission -->
-    <select id="{{ $name }}" name="{{ $name }}" class="hidden" tabindex="-1" aria-hidden="true">
-        <option value="" x-bind:selected="!selectedOption"></option>
+    <select id="{{ $name }}" name="{{ $name }}" class="hidden" tabindex="-1" aria-hidden="true" x-model="selectedValue">
+        <option value=""></option>
         <template x-for="option in options" :key="option.value">
-            <option x-text="option.label" x-bind:selected="isSelected(option.value)" :value="option.value"></option>
+            <option :value="option.value" x-text="option.label"></option>
         </template>
     </select>
 

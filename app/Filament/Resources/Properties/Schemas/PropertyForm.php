@@ -91,7 +91,6 @@ class PropertyForm
 
                             ->schema([
                                 Repeater::make('images')
-
                                     ->relationship('images')
                                     ->schema([
                                         FileUpload::make('path')
@@ -106,6 +105,13 @@ class PropertyForm
                                 Textarea::make('location_map')
                                     ->label(__("Emplacement"))
                                     ->columnSpanFull(),
+                                Select::make("features")
+                                    ->label(__('Caractéristiques'))
+                                    ->relationship('features', 'name')
+                                    ->preload()
+                                    ->searchable()
+                                    ->preload()
+                                    ->multiple(),
                                 KeyValue::make('extra')
                                     ->columnSpanFull(),
                             ]),

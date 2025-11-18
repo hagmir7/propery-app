@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\City;
 use Livewire\Attributes\Url;
 
-class FilterForm extends Component
+class MobileFormFilter extends Component
 {
     public $cities = [];
 
@@ -27,13 +27,13 @@ class FilterForm extends Component
 
     public function mount()
     {
-        $this->cities = City::all()->map(function ($city) {
-            return ['value' => (string) $city->id, 'label' => $city->name];
-        })->toArray();
+        $this->cities = City::all();
     }
+
+
 
     public function render()
     {
-        return view('livewire.filter-form');
+        return view('livewire.mobile-form-filter');
     }
 }

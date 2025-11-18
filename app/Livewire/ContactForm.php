@@ -9,13 +9,13 @@ use Livewire\Component;
 class ContactForm extends Component
 {
 
-    #[Validate('required|string|max:100')]
+    #[Validate('required|string|max:100', "Nom complet")]
     public $full_name;
-    #[Validate('required|email|max:50')]
+    #[Validate('required|email|max:50', "E-mail")]
     public $email;
-    #[Validate('required|string|max:150')]
+    #[Validate('required|string|max:150', "Sujet")]
     public $subject;
-    #[Validate('required|string|max:600')]
+    #[Validate('required|string|max:600', "Message")]
     public $message;
 
 

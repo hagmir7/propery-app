@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PropertyController;
 use App\Models\City;
@@ -31,7 +32,7 @@ Route::get('/', function () {
         $query->where('price', '<=', request('price_max'));
     }
 
-    $properties = $query->get();
+    $properties = $query->paginate(20);
     $cities = City::all()->map(function ($city) {
         return ['value' => (string) $city->id, 'label' => $city->name];
     })->toArray();
@@ -42,6 +43,7 @@ Route::get('/', function () {
 
 Route::get('property/{property:slug}', [PropertyController::class, 'show'])->name('property.show');
 Route::get('page/{page:slug}', [PageController::class, 'show'])->name('page.show');
+Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 
 
 Route::get('/logout', function () {
