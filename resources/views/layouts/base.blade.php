@@ -18,6 +18,7 @@
     <x-header />
     @yield('content')
     <x-footer />
+    <x-whatsapp-button />
     @livewireScripts
 </body>
 

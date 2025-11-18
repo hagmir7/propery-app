@@ -182,10 +182,13 @@
             @endif
 
             <a href="/contact" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                    </path>
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-message">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 9h8" />
+                    <path d="M8 13h6" />
+                    <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" />
                 </svg>
                 Contactez-nous
             </a>
@@ -193,19 +196,25 @@
 
 
             <a href="/page/a-propos-de-nous" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                    </path>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-info-circle">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                    <path d="M12 9h.01" />
+                    <path d="M11 12h1v4h1" />
                 </svg>
                 À propos
             </a>
 
             <a href="/page/conditions-generales" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                    </path>
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-flag-minus">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M14.373 15.301a4.978 4.978 0 0 1 -2.373 -1.301a5 5 0 0 0 -7 0v-9a5 5 0 0 1 7 0a5 5 0 0 0 7 0v9" />
+                    <path d="M5 21v-7" />
+                    <path d="M16 19h6" />
                 </svg>
                 Conditions générales
             </a>
