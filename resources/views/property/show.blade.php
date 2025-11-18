@@ -94,7 +94,7 @@
             <!-- Sidebar -->
             <aside class="lg:col-span-4 space-y-4" id="booking">
                 <!-- Search Box -->
-                <div class="bg-white rounded-lg shadow-sm p-4">
+                <div class="bg-white rounded-lg shadow-sm p-4 lg:sticky top-24">
                     <h2 class="text-xl font-semibold mb-2 animate-shake-every-15s">
                         Envoyer la réservation
                     </h2>
@@ -104,11 +104,11 @@
 
                 <!-- Map Preview -->
                 @if ($property->location_map)
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <div class="relative h-60 bg-gray-200">
-                            {!! $property->location_map !!}
-                        </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative h-60 bg-gray-200">
+                        {!! $property->location_map !!}
                     </div>
+                </div>
                 @endif
             </aside>
         </div>

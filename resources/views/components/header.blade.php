@@ -51,7 +51,7 @@
 
 
             {{-- Search Bar (desktop and tablet) --}}
-            <div class="flex-1 max-w-4xl hidden md:block">
+            <div class="flex-1 max-w-4xl hidden xl:block">
                 @livewire('filter-form')
             </div>
 
@@ -136,7 +136,7 @@
 
     {{-- Mobile Search Panel --}}
 
-    <div x-show="mobileSearchOpen" x-cloak class="md:hidden">
+    <div x-show="mobileSearchOpen" x-cloak class="xl:hidden">
         <div class="px-4 pb-4 pt-2 bg-white border-t border-gray-100">
             @livewire('mobile-form-filter')
         </div>
@@ -145,7 +145,7 @@
 
 
     {{-- Mobile Menu Panel --}}
-    <div x-show="mobileMenuOpen" x-cloak class="md:hidden">
+    <div x-show="mobileMenuOpen" x-cloak class="xl:hidden">
         <div class="px-4 pb-4 pt-2 bg-white border-t border-gray-100 space-y-2">
             @if (auth()->user())
             <a href="/admin" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
