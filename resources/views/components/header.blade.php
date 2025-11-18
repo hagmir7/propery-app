@@ -195,7 +195,7 @@
 
 
 
-            <a href="/page/a-propos-de-nous" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
+            <a href="/page/a-propos-de-nous-sakanyma" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-info-circle">
@@ -207,7 +207,7 @@
                 À propos
             </a>
 
-            <a href="/page/conditions-generales" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
+            <a href="/page/conditions-generales-sakanyma" class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-gray-50">
                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-flag-minus">

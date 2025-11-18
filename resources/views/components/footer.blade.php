@@ -34,7 +34,7 @@
                             <a href="/contact" class="hover:underline ">Contactez-nous</a>
                         </li>
                         <li>
-                            <a href="/page/a-propos-de-nous" class="hover:underline">À propos</a>
+                            <a href="/page/a-propos-de-nous-sakanyma" class="hover:underline">À propos</a>
                         </li>
                     </ul>
                 </div>
@@ -45,7 +45,7 @@
                             <a href="/page/politique-de-confidentialite-sakanyma" class="hover:underline">Politique de confidentialité</a>
                         </li>
                         <li>
-                            <a href="/page/conditions-generales" class="hover:underline">Conditions générales</a>
+                            <a href="/page/conditions-generales-sakanyma" class="hover:underline">Conditions générales</a>
                         </li>
                     </ul>
                 </div>

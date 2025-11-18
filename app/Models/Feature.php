@@ -22,6 +22,7 @@ class Feature extends Model
     {
         return SlugOptions::create()
             ->generateSlugsFrom('name')
+            ->doNotGenerateSlugsOnUpdate()
             ->saveSlugsTo('slug');
     }
 }
