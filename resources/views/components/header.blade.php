@@ -51,7 +51,7 @@
 
 
             {{-- Search Bar (desktop and tablet) --}}
-            <div class="flex-1 max-w-4xl hidden xl:block">
+            <div class="flex-1 max-w-4xl hidden lg:block">
                 @livewire('filter-form')
             </div>
 
