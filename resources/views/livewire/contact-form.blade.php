@@ -1,10 +1,10 @@
-<div class="grid lg:grid-cols-2 items-start gap-16 my-10 mx-auto bg-purple-50 rounded-2xl p-6 border-purple-600 border">
+<div class="grid lg:grid-cols-2 items-start gap-5 md:gap-16 my-10 mx-auto bg-purple-50 rounded-2xl p-6 border-purple-600 border">
     <div>
         <h2 class="text-slate-900 text-3xl font-bold">Parlons-en</h2>
         <p class="text-[15px] text-slate-600 mt-4 leading-relaxed">Vous avez une grande idée ou une marque à développer
             et vous avez besoin d'aide ?
             Contactez-nous, nous serions ravis d'entendre parler de votre projet et de vous apporter notre soutien.</p>
-        <div class="mt-12">
+        <div class="mt-6 md:mt-12">
             <h2 class="text-slate-900 text-base font-semibold">Email</h2>
             <ul class="mt-4">
                 <li class="flex items-center">
@@ -24,7 +24,7 @@
             </ul>
         </div>
 
-        <div class="mt-12">
+        <div class="mt-12 hidden md:block">
             <h2 class="text-slate-900 text-base font-semibold">Réseaux sociaux</h2>
             <ul class="flex mt-4 space-x-4">
                 <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full border border-purple-600 flex items-center justify-center shrink-0">
@@ -72,7 +72,7 @@
             @error('message') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
         <div class="flex justify-center">
             <button type="submit"
-                class="bg-purple-600 text-white  font-semibold px-3 py-2 rounded-2xl hover:from-purple-700 hover:to-purple-800 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg w-full max-w-xs text-center">
+                class="bg-purple-600 text-white mt-3 font-semibold px-3 py-2 rounded-2xl hover:from-purple-700 hover:to-purple-800 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg w-full max-w-xs text-center">
                 Envoyer le message
             </button>
         </div>

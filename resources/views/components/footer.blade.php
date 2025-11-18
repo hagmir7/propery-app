@@ -23,7 +23,7 @@
                             <a href="/" class="hover:underline">Accueil</a>
                         </li>
                         <li>
-                            <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            <a href="#!" class="hover:underline">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -34,18 +34,18 @@
                             <a href="/contact" class="hover:underline ">Contactez-nous</a>
                         </li>
                         <li>
-                            <a href="/about-us" class="hover:underline">À propos</a>
+                            <a href="/page/a-propos-de-nous" class="hover:underline">À propos</a>
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-span-2 md:col-span-1 mb-4 md:mb-0">
                     <h2 class="mb-6 text-sm font-semibold text-heading uppercase">Légal</h2>
                     <ul class="text-body font-medium">
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Politique de confidentialité</a>
+                            <a href="/page/politique-de-confidentialite-sakanyma" class="hover:underline">Politique de confidentialité</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Conditions générales</a>
+                            <a href="/page/conditions-generales" class="hover:underline">Conditions générales</a>
                         </li>
                     </ul>
                 </div>

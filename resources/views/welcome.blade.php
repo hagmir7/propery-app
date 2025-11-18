@@ -5,7 +5,7 @@
     {{-- Background Image --}}
     <picture class="absolute inset-0 w-full h-full ">
         <source media="(max-width: 480px)"
-            srcset="https://static.cozycozy.com/images/catalog/bg/maroc-mobile-small.jpg">
+            srcset="https://static.cozycozy.com/images/catalog/bg/maroc.jpg">
         <img src="https://static.cozycozy.com/images/catalog/bg/maroc.jpg" alt="location vacances Maroc"
             class="w-full h-full object-cover">
     </picture>
@@ -87,16 +87,6 @@
             revenez
             plus tard.
         </p>
-
-        <!-- Optional Action Button -->
-        <a href=""
-            class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            Voir toutes les propriétés
-        </a>
     </div>
     @endif
 
