@@ -103,19 +103,13 @@
                 </div>
 
                 <!-- Map Preview -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="relative h-60 bg-gray-200">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019257850829!2d-122.41941518468117!3d37.77492977975992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808b12345678%3A0xabcdef123456!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        {{-- <button
-                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 hover:bg-opacity-50 transition-opacity">
-                            <span class="text-white font-medium">Voir sur la carte</span>
-                        </button> --}}
+                @if ($property->location_map)
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative h-60 bg-gray-200">
+                            {!! $property->location_map !!}
+                        </div>
                     </div>
-                </div>
+                @endif
             </aside>
         </div>
     </div>

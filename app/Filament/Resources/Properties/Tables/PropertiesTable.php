@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Properties\Tables;
 
+use App\Models\Property;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -70,7 +71,10 @@ class PropertiesTable
                 TrashedFilter::make(),
             ])
             ->recordActions([
-                ViewAction::make(),
+                ViewAction::make()
+                    ->url(function(Property $record){
+                        return route('property.show', $record->slug);
+                    })->openUrlInNewTab(),
                 EditAction::make(),
             ])
             ->toolbarActions([

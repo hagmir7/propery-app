@@ -58,7 +58,7 @@ class PropertyResource extends Resource
         return [
             'index' => ListProperties::route('/'),
             'create' => CreateProperty::route('/create'),
-            'view' => ViewProperty::route('/{record}'),
+            // 'view' => ViewProperty::route('/{record}'),
             'edit' => EditProperty::route('/{record}/edit'),
         ];
     }

@@ -11,16 +11,15 @@ class PropertyInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('title'),
-
-                TextEntry::make('city.name')
+                TextEntry::make('owner_id')
                     ->numeric(),
-
+                TextEntry::make('city_id')
+                    ->numeric(),
+                TextEntry::make('title'),
                 TextEntry::make('type')
                     ->numeric(),
                 TextEntry::make('operation')
                     ->numeric(),
-
                 TextEntry::make('rent_type')
                     ->numeric(),
                 TextEntry::make('price')

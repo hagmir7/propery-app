@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Contacts\Tables;
 
+use Filament\Actions\BulkAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -47,6 +48,19 @@ class ContactsTable
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
+
+                    BulkAction::make('mark_as_read')
+                        ->label(__('Marquer comme lu'))
+                        ->icon('heroicon-o-check')
+                        ->action(function ($records) {
+                            foreach ($records as $record) {
+                                $record->update([
+                                    'readed_at' => now(),
+                                ]);
+                            }
+                        })
+                        ->requiresConfirmation()
+                        ->color('success'),
                 ]),
             ]);
     }
