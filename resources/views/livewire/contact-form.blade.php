@@ -16,7 +16,7 @@
                                 data-original="#000000" />
                         </svg>
                     </div>
-                    <a href="javascript:void(0)" class="text-sm ml-4">
+                    <a href="mailto:contact@sakany.ma" class="text-sm ml-4">
                         <small class="block text-slate-900">Mail</small>
                         <spane class="font-semibold text-blue-600">contact@sakany.ma</spane>
                     </a>
@@ -28,7 +28,7 @@
             <h2 class="text-slate-900 text-base font-semibold">Réseaux sociaux</h2>
             <ul class="flex mt-4 space-x-4">
                 <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full border border-purple-600 flex items-center justify-center shrink-0">
-                    <a href="javascript:void(0)">
+                    <a href="https://facebook.com">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                             viewBox="0 0 24 24">
                             <path
@@ -39,7 +39,7 @@
                 </li>
 
                 <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full border border-purple-600 flex items-center justify-center shrink-0">
-                    <a href="javascript:void(0)">
+                    <a href="https://facebook.com">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                             viewBox="0 0 24 24">
                             <path

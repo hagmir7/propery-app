@@ -1,7 +1,7 @@
 <form wire:submit='submit' class="space-y-4">
-    @if (session()->has('success'))
+    @if (session()->has('message'))
     <div class="p-3 mb-4 text-green-700 bg-green-100 border border-green-300 rounded-lg">
-        {{ session('success') }}
+        {{ session('message') }}
     </div>
     @endif
     <!-- Nom et prénom -->
@@ -46,9 +46,14 @@
         @enderror
     </div>
 
-    <!-- Submit button -->
-    <button type="submit"
-        class="w-full bg-blue-600 text-white py-3 rounded-md font-medium hover:bg-blue-700 transition-colors cursor-pointer">
-        Envoyer
-    </button>
+        <button type="submit" wire:loading.attr="disabled" wire:target="submit"
+            class="w-full bg-blue-600 text-white py-3 rounded-md font-medium hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
+            <span wire:loading.remove wire:target="submit">
+                Envoyer
+            </span>
+
+            <span wire:loading wire:target="submit" class="flex items-center justify-center gap-2">
+                <span>Envoi en cours...</span>
+            </span>
+        </button>
 </form>

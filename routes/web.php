@@ -37,7 +37,9 @@ Route::get('/', function () {
         return ['value' => (string) $city->id, 'label' => $city->name];
     })->toArray();
 
-    return view('welcome', compact('properties', 'cities'));
+    $title = "Vente et location d’appartements, villas, maisons, terrains.";
+
+    return view('welcome', compact('properties', 'cities', 'title'));
 })->name('home');
 
 

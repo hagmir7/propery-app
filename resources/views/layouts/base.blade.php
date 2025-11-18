@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ isset($title) ? $title : config('app.name') }}</title>
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta http-equiv="content-language" content="fr">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="{{ isset($description) ? Str::limit($description, 160, '') : "Trouvez votre futur bien immobilier, Vente et location d’appartements, villas, maisons, terrains et locaux commerciaux." }}">
+    <meta name="keywords" content="{{ isset($tags) ? $tags : 'Vente et location, d’appartements, villas, maisons, terrains et locaux commerciaux.' }}">
+    <meta itemprop="image" content="{{ isset($image) ? url(config('app.storage'), $image) : asset('images/intercocina-logo.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images\favicon.png') }}">
+    <link rel="canonical" href="{{ request()->fullUrl() }}" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 
@@ -16,7 +20,9 @@
 
 <body>
     <x-header />
-    @yield('content')
+    <main>
+        @yield('content')
+    </main>
     <x-footer />
     <x-whatsapp-button />
     @livewireScripts

@@ -17,10 +17,9 @@
 
         {{-- Property Details --}}
         <div class="p-4">
-            {{-- Title --}}
-            <h3 class="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
+            <h2 class="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
                 {{ $property['title'] ?? 'Sans titre' }}
-            </h3>
+            </h2>
             <p>{{ $property['description'] }}</p>
 
             {{-- Location --}}
