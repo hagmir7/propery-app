@@ -41,15 +41,7 @@
                     <div class="grid grid-cols-4 gap-2 p-2">
                         @foreach ($property->features as $feature)
                         <div class="col-span-2 md:col-span-1 border border-gray-300 rounded-md flex items-start space-x-3 p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="icon icon-tabler icons-tabler-outline icon-tabler-wifi">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M12 18l.01 0" />
-                                <path d="M9.172 15.172a4 4 0 0 1 5.656 0" />
-                                <path d="M6.343 12.343a8 8 0 0 1 11.314 0" />
-                                <path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0" />
-                            </svg>
+                            {!! $feature->svg_icon !!}
                             <div>
                                 <p class="font-medium text-gray-900">{{ $feature->name }}</p>
                             </div>
@@ -105,7 +97,7 @@
 
                     <!-- Map Preview -->
                     @if ($property->location_map)
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden mt-3">
                         <div class="relative h-60 bg-gray-200">
                             {!! $property->location_map !!}
                         </div>
