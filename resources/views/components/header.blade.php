@@ -81,7 +81,7 @@
 
 
                         <div
-                            class="absolute right-0 mt-3 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 py-2">
+                            class="absolute right-0 mt-3 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 py-2 z-40">
                             <div class="px-4 py-3 border-b border-gray-100">
                                 <p class="text-sm font-semibold text-gray-900">{{ auth()->user()->name }}</p>
                                 <p class="text-xs text-gray-500 mt-0.5">{{ auth()->user()->email }}</p>

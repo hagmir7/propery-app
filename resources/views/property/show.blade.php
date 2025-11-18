@@ -85,7 +85,7 @@
 
             <!-- Sidebar -->
             <aside class="lg:col-span-4 space-y-4" id="booking">
-                <div class="lg:sticky top-24 z-50">
+                <div class="lg:sticky top-24 z-40">
                     <!-- Search Box -->
                     <div class="bg-white rounded-lg shadow-sm p-4 ">
                         <h2 class="text-xl font-semibold mb-2 animate-shake-every-15s">
