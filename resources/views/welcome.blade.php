@@ -55,7 +55,7 @@
                     'search_dates' => '02/01 – 09/01',
                     'slug' => $property->slug,
                     'total_price' => 3150,
-                    'nights' => 7
+                    'operation' => $property->operation
                 ]" />
         @endforeach
     </div>

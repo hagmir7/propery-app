@@ -18,24 +18,47 @@
         {{-- Property Details --}}
         <div class="p-4">
             <h2 class="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
-                {{ $property['title'] ?? 'Sans titre' }}
+                {{ $property['title'] }}
             </h2>
             <p>{{ $property['description'] }}</p>
 
+          <div class="flex gap-3">
             {{-- Location --}}
             @if(isset($property['location']))
             <div class="flex items-center text-gray-600 text-sm mb-2">
                 <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 {{ $property['location'] }}
             </div>
             @endif
 
-            {{-- Features --}}
+
+
+            @if(isset($property['type']))
+            <div class="flex items-center text-gray-600 text-sm mb-2">
+                <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                </svg>
+
+                {{
+                [
+                1 => 'Appartement',
+                2 => 'Villa',
+                3 => 'Boutique',
+                4 => 'Terrain',
+                5 => 'Maison',
+                ][$property['type']]
+                }}
+            </div>
+            @endif
             <div class="flex items-center gap-4 text-sm text-gray-600 mb-3 mt-2">
                 <div class="flex items-center">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,6 +70,22 @@
                     {{ $property['city'] }}, Maroc
                 </div>
             </div>
+
+            @if(isset($property['operation']))
+            <div class="flex items-center text-gray-600 text-sm mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-briefcase">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                    <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+                    <path d="M12 12l0 .01" />
+                    <path d="M3 13a20 20 0 0 0 18 0" />
+                </svg>
+                {{ $property['operation'] == 1 ? "Vente" : "Location" }}
+            </div>
+            @endif
+          </div>
 
             {{-- Price --}}
             <div class="flex items-center justify-between pt-3 border-t border-gray-200">

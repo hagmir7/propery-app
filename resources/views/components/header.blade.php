@@ -7,18 +7,18 @@
         <div class="flex items-center justify-between h-20 gap-4 md:gap-8">
 
             {{-- Left: Logo --}}
-            <div class="flex items-center gap-3 flex-shrink-0">
-                <a href="/" class="block group flex items-center gap-3">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        </svg>
-                    </div>
-                    <span class="text-2xl font-bold text-gray-900 tracking-tight">SAKANY</span>
-                </a>
-            </div>
+          <div class="flex items-center gap-3 flex-shrink-0">
+            <a href="/" class="block group flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <span class="text-2xl font-bold text-gray-900 tracking-tight">SAKANY</span>
+            </a>
+        </div>
 
             {{-- Mobile buttons (left of center) --}}
             <div class="flex items-center gap-2 md:hidden">
