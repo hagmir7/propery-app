@@ -16,12 +16,11 @@ Route::get('/', function () {
     }
 
     if (request()->filled('property_type')) {
-        $query->where('property_type_id', request('property_type'));
+        $query->where('type', request('property_type'));
     }
 
     if (request()->filled('operation')) {
-        $query->where('operation_type', request('operation'));
-        // Example: 1 = Vente, 2 = Location
+        $query->where('operation', request('operation'));
     }
 
     if (request()->filled('price_min')) {
