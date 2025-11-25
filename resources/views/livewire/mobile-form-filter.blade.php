@@ -48,7 +48,7 @@
     </div>
 
     <div class="flex items-center gap-2">
-        <button type="submit" class="flex-1 bg-purple-600 text-white py-2.5 rounded-lg font-semibold">Chercher</button>
+        <button type="submit" class="flex-1 bg-[#112d6e] text-white py-2.5 rounded-lg font-semibold">Chercher</button>
         <button type="button" @click="mobileSearchOpen = false"
             class="px-4 py-2 rounded-lg border border-gray-200">Annuler</button>
     </div>

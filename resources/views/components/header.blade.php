@@ -3,20 +3,13 @@
 <header x-data="{ mobileMenuOpen: false, mobileSearchOpen: false }"
     class="bg-white shadow-sm sticky top-0 z-50 backdrop-blur-sm bg-white/95">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20 gap-4 md:gap-8">
 
             {{-- Left: Logo --}}
           <div class="flex items-center gap-3 flex-shrink-0">
-            <a href="/" class="block group flex items-center gap-3">
-                <div
-                    class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                    </svg>
-                </div>
-                <span class="text-2xl font-bold text-gray-900 tracking-tight">SAKANY</span>
+            <a href="/" class="group flex items-center gap-3">
+                <img src="/images/logo.png" alt="SAKANY logo">
             </a>
         </div>
 
@@ -70,7 +63,7 @@
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                         <div
-                            class="w-8 h-8 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center shadow-sm">
+                            class="w-8 h-8 bg-gradient-to-br from-[#112d6e] to-[#112d6e] rounded-full flex items-center justify-center shadow-sm">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -88,7 +81,7 @@
                             </div>
 
                             <a href="/admin"
-                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#112d6e] transition-colors">
 
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -103,7 +96,7 @@
                             </a>
 
                             <a href="/admin/bookings"
-                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 transition-colors">
+                                class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-[#112d6e] transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">

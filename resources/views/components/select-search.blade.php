@@ -145,10 +145,10 @@
           }" class="flex items-center justify-between gap-2 px-3 py-2.5 text-sm transition-colors cursor-pointer"
                     role="option">
                     <span x-text="option.label" x-bind:class="{
-              'font-semibold text-purple-600': isSelected(option.value),
+              'font-semibold text-[#112d6e]': isSelected(option.value),
               'text-gray-700': !isSelected(option.value)
             }" class="grow"></span>
-                    <svg x-show="isSelected(option.value)" class="w-4 h-4 flex-none text-purple-600"
+                    <svg x-show="isSelected(option.value)" class="w-4 h-4 flex-none text-[#112d6e]"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2.5" style="display: none;">
                         <polyline points="20 6 9 17 4 12"></polyline>

@@ -8,6 +8,7 @@
     <title>{{ isset($title) ? $title : config('app.name') }}</title>
     <meta http-equiv="content-language" content="fr">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" type="image/svg" href="{{ asset('images/icon.svg') }}" />
     <meta name="description" content="{{ isset($description) ? Str::limit($description, 160, '') : "Trouvez votre futur bien immobilier, Vente et location d’appartements, villas, maisons, terrains et locaux commerciaux." }}">
     <meta name="keywords" content="{{ isset($tags) ? $tags : 'Vente et location, d’appartements, villas, maisons, terrains et locaux commerciaux.' }}">
     <meta itemprop="image" content="{{ isset($image) ? url(config('app.storage'), $image) : asset('images/intercocina-logo.png') }}">

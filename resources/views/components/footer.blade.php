@@ -3,14 +3,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center gap-4">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        </svg>
-                    </div>
-                    <span class="text-2xl font-bold text-gray-900 tracking-tight">SAKANY</span>
+                    <img src="/images/logo.png" alt="SAKANY logo">
                 </a>
                 <p class="mt-3">Sakany.ma est une plateforme immobilière dédiée à la vente et à la location <br> d’appartements, villas, maisons, terrains et
                 locaux commerciaux partout au Maroc.</p>
