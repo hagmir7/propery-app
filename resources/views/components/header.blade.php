@@ -9,7 +9,7 @@
             {{-- Left: Logo --}}
           <div class="flex items-center gap-3 flex-shrink-0">
             <a href="/" class="group flex items-center gap-3">
-                <img src="/images/logo.png" alt="SAKANY logo">
+                <img src="/images/logo.png" class="w-44 lg:w-auto" alt="SAKANY logo">
             </a>
         </div>
 
