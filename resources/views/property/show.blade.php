@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="bg-gray-50 min-h-screen">
-    <div class="max-w-7xl mx-auto px-4 py-6">
+    <div class="max-w-7xl mx-auto p-2 md:px-4 py-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
             <!-- Main Content -->
             <main class="lg:col-span-8">
                 <!-- Property Header -->
-                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                <div class="bg-white rounded-lg shadow-sm p2 md:p-4 mb-6">
                     @if(!empty($property->images))
                     <x-property-images :images="$property->images" />
                     @endif
@@ -22,7 +22,7 @@
                             <p class="mb-2">{{ $property->description }}</p>
 
                             <div class="flex items-center text-md text-gray-600">
-                                <div class="flex gap-3">
+                                <div class="flex gap-3 flex-wrap">
                                     <div class="flex items-center text-gray-600 text-md mb-2">
                                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                             aria-hidden="true">
