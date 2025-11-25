@@ -22,7 +22,7 @@
             </h2>
             <p>{{ $property['description'] }}</p>
 
-          <div class="flex gap-3">
+          <div class="flex gap-2 md:gap-3">
             {{-- Location --}}
             @if(isset($property['location']))
             <div class="flex items-center text-gray-600 text-sm mb-2">
@@ -67,7 +67,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    {{ $property['city'] }}, Maroc
+                    {{ $property['city'] }}
                 </div>
             </div>
 
