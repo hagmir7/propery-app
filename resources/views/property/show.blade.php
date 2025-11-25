@@ -8,7 +8,7 @@
             <!-- Main Content -->
             <main class="lg:col-span-8">
                 <!-- Property Header -->
-                <div class="bg-white rounded-lg shadow-sm p2 md:p-4 mb-6">
+                <div class="bg-white rounded-lg shadow-sm p-2 md:p-4 mb-6">
                     @if(!empty($property->images))
                     <x-property-images :images="$property->images" />
                     @endif
