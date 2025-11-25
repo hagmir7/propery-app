@@ -15,7 +15,7 @@
 
                     <div class="flex items-start justify-between mb-4 mt-3">
                         <div>
-                            <h1 class="text-3xl font-bold text-gray-900 mb-2">
+                            <h1 class="text-lg md:text-3xl font-bold text-gray-900 mb-2">
                                 {{ $property->title }}
                             </h1>
 
