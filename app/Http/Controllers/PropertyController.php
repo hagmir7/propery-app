@@ -9,6 +9,7 @@ class PropertyController extends Controller
 {
     public function show(Property $property){
         $property->load(['images', 'city']);
-        return view('property.show', compact('property'));
+        $title = $property->title;
+        return view('property.show', compact('property', 'title'));
     }
 }
