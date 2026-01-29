@@ -16,6 +16,7 @@
     <link rel="canonical" href="{{ request()->fullUrl() }}" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    <meta name="google-site-verification" content="7WZ5n1qBe1lhjjTZYw6HKt5hfnJ91ETJkBiEjjHRw3A" />
 
 </head>
 

@@ -4,24 +4,64 @@
         <p class="text-[15px] text-slate-600 mt-4 leading-relaxed">Vous avez une grande idée ou une marque à développer
             et vous avez besoin d'aide ?
             Contactez-nous, nous serions ravis d'entendre parler de votre projet et de vous apporter notre soutien.</p>
-        <div class="mt-6 md:mt-12">
-            <h2 class="text-slate-900 text-base font-semibold">Email</h2>
-            <ul class="mt-4">
-                <li class="flex items-center">
-                    <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
-                            viewBox="0 0 479.058 479.058">
-                            <path
-                                d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                                data-original="#000000" />
-                        </svg>
-                    </div>
-                    <a href="mailto:contact@sakany.ma" class="text-sm ml-4">
-                        <small class="block text-slate-900">Mail</small>
-                        <spane class="font-semibold text-blue-600">contact@sakany.ma</spane>
-                    </a>
-                </li>
-            </ul>
+        <div class="mt-4 md:mt-8">
+            <h2 class="text-slate-900 text-base font-semibold">Contacts</h2>
+          <ul class="mt-4">
+
+            <li class="flex items-center">
+                <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                    <!-- ICON NOT TOUCHED -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
+                        viewBox="0 0 479.058 479.058">
+                        <path
+                            d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
+                            data-original="#000000" />
+                    </svg>
+                </div>
+
+                <a href="mailto:contact@sakany.ma" class="text-sm ms-4">
+                    <small class="block text-slate-900">E-mail</small>
+                    <span class="font-semibold text-blue-600">contact@sakany.ma</span>
+                </a>
+            </li>
+
+            <li class="flex items-center mt-3">
+                <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                    <!-- ICON NOT TOUCHED -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-phone">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                </div>
+
+                <a href="tel:+212669446753" class="text-sm ms-4">
+                    <small class="block text-slate-900">Téléphone 1</small>
+                    <span class="font-semibold text-blue-600">+212 0669446753</span>
+                </a>
+            </li>
+
+            <li class="flex items-center mt-3">
+                <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                    <!-- ICON NOT TOUCHED -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-phone">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                </div>
+
+                <a href="tel:+2120656598198" class="text-sm ms-4">
+                    <small class="block text-slate-900">Téléphone 2</small>
+                    <span class="font-semibold text-blue-600">+212 0656598198</span>
+                </a>
+            </li>
+
+        </ul>
         </div>
 
         <div class="mt-12 hidden md:block">

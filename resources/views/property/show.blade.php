@@ -84,10 +84,31 @@
                         </div>
                     </div>
 
-                    <a href="#booking"
-                        class="w-full inline-block text-center bg-blue-600 text-white py-3 rounded-md font-medium hover:bg-blue-700 transition-colors">
-                        Réservez une visite
-                    </a>
+                    <div class="flex gap-2">
+
+                        <!-- Booking Button -->
+                        <a href="#booking"
+                            class="w-full inline-block text-center bg-[#112d6e] hover:bg-[#112d6e] text-white py-3 rounded-md font-medium transition-colors">
+                            Réservez une visite
+                        </a>
+
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/212656598198" target="_blank"
+                            class="w-full text-center bg-green-600 text-white py-3 rounded-md font-medium hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                                <path
+                                    d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                            </svg>
+
+                            <span>WhatsApp</span>
+                        </a>
+
+                    </div>
                 </div>
 
                 @if(!empty($property->features) && count($property->features))
@@ -140,12 +161,62 @@
             <aside class="lg:col-span-4 space-y-4" id="booking">
                 <div class="lg:sticky top-24 z-40">
                     <!-- Search Box -->
-                    <div class="bg-white rounded-lg shadow-sm p-4">
+                    <div class="bg-white rounded-lg shadow-sm p-4 mb-2">
                         <h2 class="text-xl font-semibold mb-2 animate-shake-every-15s">
                             Envoyer la réservation
                         </h2>
 
                         @livewire('booking-form', ['property' => $property], key($property->id))
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 mt-3">
+                        <div class="">
+                            <h2 class="text-slate-900 text-base font-semibold">Contacts</h2>
+                            <ul class="mt-4">
+                                <li class="flex items-center mt-3">
+                                    <div
+                                        class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                                        <!-- ICON NOT TOUCHED -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-phone">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                            </path>
+                                        </svg>
+                                    </div>
+
+                                    <a href="tel:+212669446753" class="text-sm ms-4">
+                                        <small class="block text-slate-900">Téléphone 1</small>
+                                        <span class="font-semibold text-blue-600">+212 0669446753</span>
+                                    </a>
+                                </li>
+
+                                <li class="flex items-center mt-3">
+                                    <div
+                                        class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                                        <!-- ICON NOT TOUCHED -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-phone">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                            </path>
+                                        </svg>
+                                    </div>
+
+                                    <a href="tel:+2120656598198" class="text-sm ms-4">
+                                        <small class="block text-slate-900">Téléphone 2</small>
+                                        <span class="font-semibold text-blue-600">+212 0656598198</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- Map Preview -->

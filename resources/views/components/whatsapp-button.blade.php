@@ -1,4 +1,4 @@
-<a href="https://wa.me/PHONENUMBER?text=Hello%20there!%20I%20found%20you%20on%20your%20website" target="_blank"
+<a href="https://wa.me/+212656598198" target="_blank"
     rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="fixed right-5 bottom-5 z-50 group">
     <div class="relative">
         <!-- pulse ring -->

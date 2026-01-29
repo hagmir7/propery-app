@@ -48,7 +48,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-md text-body sm:text-center">© 2023 <a href="" class="hover:underline">SAKANY.MA</a>. Tous droits réservés. </span>
             <div class="flex mt-4 sm:justify-center sm:mt-0 gap-4">
-                <a href="#" class="text-body hover:text-heading p-2 border rounded-full">
+                <a href="https://facebook.com/sakany" class="text-body hover:text-heading p-2 border rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
@@ -58,7 +58,7 @@
                     <span class="sr-only">Page Facebook</span>
                 </a>
 
-                <a href="#" class="text-body hover:text-heading p-2 border rounded-full">
+                <a href="https://instagram.com/sakany" class="text-body hover:text-heading p-2 border rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
@@ -69,8 +69,7 @@
                     </svg>
                     <span class="sr-only">Instagram</span>
                 </a>
-
-                <a href="#" class="text-body hover:text-heading p-2 border rounded-full">
+                <a href="https://wa.me/+212656598198" class="text-body hover:text-heading p-2 border rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
@@ -78,7 +77,7 @@
                         <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
                         <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
                     </svg>
-                    <span class="sr-only">Instagram</span>
+                    <span class="sr-only">Whatsapp</span>
                 </a>
             </div>
         </div>
