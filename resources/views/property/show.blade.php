@@ -190,7 +190,7 @@
 
                                     <a href="tel:+212669446753" class="text-sm ms-4">
                                         <small class="block text-slate-900">Téléphone 1</small>
-                                        <span class="font-semibold text-blue-600">+212 0669446753</span>
+                                        <span class="font-semibold text-blue-600">+212 669446753</span>
                                     </a>
                                 </li>
 
@@ -209,9 +209,9 @@
                                         </svg>
                                     </div>
 
-                                    <a href="tel:+2120656598198" class="text-sm ms-4">
+                                    <a href="tel:+212656598198" class="text-sm ms-4">
                                         <small class="block text-slate-900">Téléphone 2</small>
-                                        <span class="font-semibold text-blue-600">+212 0656598198</span>
+                                        <span class="font-semibold text-blue-600">+212 656598198</span>
                                     </a>
                                 </li>
 
