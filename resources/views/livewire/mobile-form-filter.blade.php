@@ -3,7 +3,7 @@
 
         <div>
             <label class="block text-xs text-gray-500 mb-1">Ville</label>
-            <div class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm">
+            <div class="w-full rounded-lg border border-gray-200 px-3 py-1 text-sm">
                 <x-select-search name="city" placeholder="Toutes les villes" :options="$cities" :selected="request('city')" />
             </div>
         </div>
