@@ -40,6 +40,16 @@ class Property extends Model
     ];
 
 
+    const TYPES = [
+        1 => 'Appartement',
+        2 => 'Villa',
+        3 => 'Maison',
+        4 => 'Terrain',
+        5 => 'Local commercial',
+        6 => 'Ferme',
+        7 => 'Studio',
+    ];
+
     // Relations
     public function owner()
     {

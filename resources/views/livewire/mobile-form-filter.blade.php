@@ -12,26 +12,11 @@
             <label class="block text-xs text-gray-500 mb-1">Type</label>
             <select name="property_type" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm">
                 <option value="">{{ __('Tous') }}</option>
-
-                <option value="1" {{ request('property_type')=='1' ? 'selected' : '' }}>
-                    Appartement
+                @foreach(\App\Models\Property::TYPES as $key => $label)
+                <option value="{{ $key }}" {{ request('property_type')==$key ? 'selected' : '' }}>
+                    {{ $label }}
                 </option>
-
-                <option value="2" {{ request('property_type')=='2' ? 'selected' : '' }}>
-                    Villa
-                </option>
-
-                <option value="3" {{ request('property_type')=='3' ? 'selected' : '' }}>
-                    Maison
-                </option>
-
-                <option value="4" {{ request('property_type')=='4' ? 'selected' : '' }}>
-                    Terrain
-                </option>
-
-                <option value="5" {{ request('property_type')=='5' ? 'selected' : '' }}>
-                    Local commercial
-                </option>
+                @endforeach
             </select>
         </div>
 

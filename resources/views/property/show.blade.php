@@ -40,13 +40,7 @@
 
                                     @if(!empty($property->type))
                                     @php
-                                    $types = [
-                                    1 => 'Appartement',
-                                    2 => 'Villa',
-                                    3 => 'Boutique',
-                                    4 => 'Terrain',
-                                    5 => 'Maison',
-                                    ];
+                                    $types = \App\Models\Property::TYPES;
                                     @endphp
 
                                     <div class="flex items-center text-gray-600 text-md mb-2">

@@ -26,14 +26,10 @@
             </path>
         </svg>
         <div class="flex-1">
-            <x-select-search name="property_type" label="Type" placeholder="Tous" :options="[
-                    ['label' => 'Tout', 'value' => ''],
-                    ['label' => 'Appartement', 'value' => '1'],
-                    ['label' => 'Villa', 'value' => '2'],
-                    ['label' => 'Maison', 'value' => '3'],
-                    ['label' => 'Terrain', 'value' => '4'],
-                    ['label' => 'Local commercial', 'value' => '5'],
-                ]" :selected="request('property_type')" />
+           <x-select-search name="property_type" label="Type" placeholder="Tous" :options="collect(\App\Models\Property::TYPES)->map(fn($label, $value) => [
+                'label' => $label,
+                'value' => (string) $value
+            ])->prepend(['label' => 'Tout', 'value' => ''])->values()->toArray()" :selected="request('property_type')" />
         </div>
     </div>
 

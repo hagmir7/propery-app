@@ -9,6 +9,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
+
+    request()->validate([
+        'city' => 'nullable|exists:cities,id',
+        'property_type' => 'nullable|in:1,2,3,4,5,6,7',
+        'operation' => 'nullable|in:sale,rent',
+        'price_min' => 'nullable|numeric',
+        'price_max' => 'nullable|numeric',
+    ]);
+
+
     $query = Property::query();
 
     if (request()->filled('city')) {

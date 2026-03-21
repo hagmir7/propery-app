@@ -28,13 +28,7 @@ class PropertiesTable
                     ->sortable(),
 
                 SelectColumn::make('type')
-                    ->options([
-                        1 => 'Appartement',
-                        2 => 'Villa',
-                        3 => 'Maison',
-                        4 => 'Terrain',
-                        5 => 'Local commercia'
-                    ])
+                    ->options(\App\Models\Property::TYPES)
                 ->native(false)
                     ->sortable(),
                 SelectColumn::make('operation')
