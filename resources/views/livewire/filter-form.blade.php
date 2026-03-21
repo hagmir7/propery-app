@@ -1,5 +1,5 @@
 <form action="/" method="GET"
-    class="flex items-center bg-gray-50/80 border border-gray-200 rounded-2xl hover:border-purple-300 hover:bg-white focus-within:border-purple-500 focus-within:bg-white focus-within:shadow-lg transition-all duration-300">
+    class="flex items-center bg-white border border-gray-200 rounded-2xl hover:border-purple-300 hover:bg-white focus-within:border-purple-500 focus-within:bg-white focus-within:shadow-lg transition-all duration-300">
 
     {{-- City --}}
     <div

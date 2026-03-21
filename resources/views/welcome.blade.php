@@ -4,8 +4,8 @@
 <section class="relative py-24">
     {{-- Background Image --}}
     <picture class="absolute inset-0 w-full h-full ">
-        <source media="(max-width: 480px)" srcset="/images/building.jpg">
-        <img src="/images/building.jpg" alt="location vacances Maroc" class="w-full h-full object-cover">
+        <source media="(max-width: 480px)" srcset="/images/immobiliers.webp">
+        <img src="/images/immobiliers.webp" alt="location vacances Maroc" class="w-full h-full object-cover">
     </picture>
 
     {{-- Dark Overlay --}}

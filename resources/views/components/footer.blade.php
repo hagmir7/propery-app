@@ -48,7 +48,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-md text-body sm:text-center">© 2023 <a href="" class="hover:underline">SAKANY.MA</a>. Tous droits réservés. </span>
             <div class="flex mt-4 sm:justify-center sm:mt-0 gap-4">
-                <a href="https://facebook.com/sakany" class="text-body hover:text-heading p-2 border rounded-full">
+                <a href="https://www.facebook.com/profile.php?id=61587250631512" class="text-body hover:text-heading p-2 border rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook">
@@ -58,7 +58,7 @@
                     <span class="sr-only">Page Facebook</span>
                 </a>
 
-                <a href="https://instagram.com/sakany" class="text-body hover:text-heading p-2 border rounded-full">
+                <a href="https://www.instagram.com/sakany.ma2026" class="text-body hover:text-heading p-2 border rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">

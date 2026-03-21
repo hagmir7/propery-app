@@ -52,9 +52,9 @@
                 [
                 1 => 'Appartement',
                 2 => 'Villa',
-                3 => 'Boutique',
+                3 => 'Maison',
                 4 => 'Terrain',
-                5 => 'Maison',
+                5 => 'Local commercia'
                 ][$property['type']]
                 }}
             </div>
@@ -95,7 +95,7 @@
                     @endif
                 </div>
 
-                @if(isset($property['rating']))
+                {{-- @if(isset($property['rating']))
                 <div class="flex items-center">
                     <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
                         <path
@@ -103,7 +103,7 @@
                     </svg>
                     <span class="ml-1 text-gray-700 font-semibold">{{ $property['rating'] }}</span>
                 </div>
-                @endif
+                @endif --}}
             </div>
 
             {{-- View Button --}}

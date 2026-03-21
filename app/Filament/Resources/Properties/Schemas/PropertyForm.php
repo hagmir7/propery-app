@@ -47,9 +47,9 @@ class PropertyForm
                                             ->options([
                                                 1 => 'Appartement',
                                                 2 => 'Villa',
-                                                3 => 'Boutique',
+                                                3 => 'Maison',
                                                 4 => 'Terrain',
-                                                5 => 'Maison',
+                                                5 => 'Local commercia'
                                             ])
                                             ->native(false)
                                             ->label(__("Type"))

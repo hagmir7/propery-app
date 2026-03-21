@@ -27,7 +27,9 @@ class MobileFormFilter extends Component
 
     public function mount()
     {
-        $this->cities = City::all();
+        $this->cities = City::all()->map(function ($city) {
+            return ['value' => (string) $city->id, 'label' => $city->name];
+        })->toArray();
     }
 
 

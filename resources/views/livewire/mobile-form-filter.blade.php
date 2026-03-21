@@ -1,29 +1,37 @@
 <form action="" method="GET" class="flex flex-col gap-3">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+
         <div>
             <label class="block text-xs text-gray-500 mb-1">Ville</label>
-            <select name="city" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm">
-                <option value="">{{ __('Toutes') }}</option>
-                @foreach ($cities as $city)
-                <option value="{{ $city->id }}" {{ request('city')==$city->id ? 'selected' : '' }}>{{ $city->name }}
-                </option>
-                @endforeach
-            </select>
+            <div class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm">
+                <x-select-search name="city" placeholder="Toutes les villes" :options="$cities" :selected="request('city')" />
+            </div>
         </div>
 
         <div>
             <label class="block text-xs text-gray-500 mb-1">Type</label>
             <select name="property_type" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm">
                 <option value="">{{ __('Tous') }}</option>
-                <option value="1" {{ request('property_type')=='appartement' ? 'selected' : '' }}>
-                    Appartement</option>
-                <option value="2" {{ request('property_type')=='villa' ? 'selected' : '' }}>Villa
+
+                <option value="1" {{ request('property_type')=='1' ? 'selected' : '' }}>
+                    Appartement
                 </option>
-                <option value="3" {{ request('property_type')=='maison' ? 'selected' : '' }}>Maison
+
+                <option value="2" {{ request('property_type')=='2' ? 'selected' : '' }}>
+                    Villa
                 </option>
-                <option value="4" {{ request('property_type')=='terrain' ? 'selected' : '' }}>Terrain
+
+                <option value="3" {{ request('property_type')=='3' ? 'selected' : '' }}>
+                    Maison
                 </option>
-                <option value="5" {{ request('property_type')=='local' ? 'selected' : '' }}>Local commercial</option>
+
+                <option value="4" {{ request('property_type')=='4' ? 'selected' : '' }}>
+                    Terrain
+                </option>
+
+                <option value="5" {{ request('property_type')=='5' ? 'selected' : '' }}>
+                    Local commercial
+                </option>
             </select>
         </div>
 

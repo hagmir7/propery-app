@@ -68,7 +68,7 @@
             <h2 class="text-slate-900 text-base font-semibold">Réseaux sociaux</h2>
             <ul class="flex mt-4 space-x-4">
                 <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full border border-[#112d6e] flex items-center justify-center shrink-0">
-                    <a href="https://facebook.com" aria-label="Visiter notre page Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61587250631512" aria-label="Visiter notre page Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                             viewBox="0 0 24 24">
                             <path
@@ -80,7 +80,7 @@
                 </li>
 
                 <li class="bg-[#e6e6e6cf] h-10 w-10 rounded-full border border-[#112d6e] flex items-center justify-center shrink-0">
-                    <a href="https://instagram.com" aria-label="Visiter notre page Instagram">
+                    <a href="https://www.instagram.com/sakany.ma2026" aria-label="Visiter notre page Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000'
                             viewBox="0 0 24 24">
                             <path

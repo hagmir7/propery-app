@@ -119,7 +119,7 @@
         x-transition:leave-start="opacity-100 scale-100 translate-y-0"
         x-transition:leave-end="opacity-0 scale-95 -translate-y-2" x-on:click.outside="closeMenu()"
         x-on:keydown="handleKeydown($event)"
-        class="absolute left-0 right-0 z-50 mt-2 origin-top rounded-xl bg-white shadow-xl ring-1 ring-black/5 border border-gray-100 w-64"
+        class="absolute left-0 right-0 z-50 mt-2 origin-top rounded-xl bg-white shadow-xl ring-1 ring-black/5 border border-gray-100 w-100 md:w-64"
         style="display: none;">
         <!-- Search Input -->
         <div class="p-2 border-b border-gray-100">
