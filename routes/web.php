@@ -21,6 +21,8 @@ Route::get('/', function () {
 
     $query = Property::query();
 
+    $query->whereIn('status', [2,4,5]);
+
     if (request()->filled('city')) {
         $query->where('city_id', request('city'));
     }

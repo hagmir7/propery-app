@@ -9,15 +9,31 @@
             <main class="lg:col-span-8">
                 <!-- Property Header -->
                 <div class="bg-white rounded-lg shadow-sm p-2 md:p-4 mb-6">
-                    @if(!empty($property->images))
-                    <x-property-images :images="$property->images" />
-                    @endif
+
+               @if($property->images->isNotEmpty() || $property->getMedia()->isNotEmpty())
+                <x-property-images :property="$property" />
+                @endif
 
                     <div class="flex items-start justify-between mb-4 mt-3">
                         <div>
                             <h1 class="text-xl md:text-3xl font-bold text-gray-900 mb-2">
                                 {{ $property->title }}
                             </h1>
+
+                            {{-- Status Badge --}}
+                            @if($property->status)
+                            @php
+                            $status = $property->status instanceof \App\Enums\PropertyStatusEnum
+                            ? $property->status
+                            : \App\Enums\PropertyStatusEnum::from($property->status);
+                            @endphp
+                            <span class="{{ $status->getColor() }} text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">
+                                {{ $status->getLabel() }}
+                            </span>
+                            @endif
+                            @if ($property['code'])
+                            <h2 class="text-lg mb-2 text-gray-700">Référence: <span class="font-semibold">{{ $property['code'] }}</span></h2>
+                            @endif
 
                             <p class="mb-2">{{ $property->description }}</p>
 

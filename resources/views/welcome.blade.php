@@ -37,24 +37,25 @@
     @if($properties && $properties->count() > 0)
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach ($properties as $property)
-        <x-property-card :property="[
-                    'image' => Storage::url($property?->images?->first()?->path),
-                    'rating' => 9.8,
-                    'reviews_count' => 49,
-                    'city' => $property->city->name,
-                    'type' => $property->type,
-                    'title' => $property->title,
-                    'guests' => 4,
-                    'bedrooms' => 2,
-                    'bathrooms' => 2,
-                    'description' => Str::limit($property->description, 80, '...'),
-                    'price' => $property->price,
-                    'is_featured' => true,
-                    'search_dates' => '02/01 – 09/01',
-                    'slug' => $property->slug,
-                    'total_price' => 3150,
-                    'operation' => $property->operation
-                ]" />
+        @php
+        $propertyData = [
+        'image' => $property->getMedia()->isNotEmpty()
+        ? $property->getMedia()->first()->getUrl()
+        : Storage::url($property?->images?->first()?->path),
+        'status' => $property->status,
+        'city' => $property->city->name,
+        'type' => $property->type,
+        'title' => $property->title,
+        'code' => $property->code,
+        'description' => Str::limit($property->description, 80, '...'),
+        'price' => $property->price,
+        'is_featured' => $property->is_featured,
+        'slug' => $property->slug,
+        'operation' => $property->operation,
+        ];
+        @endphp
+
+        <x-property-card :property="$propertyData" />
         @endforeach
     </div>
 

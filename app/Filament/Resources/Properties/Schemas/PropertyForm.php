@@ -2,11 +2,13 @@
 
 namespace App\Filament\Resources\Properties\Schemas;
 
+use App\Enums\PropertyStatusEnum;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Components\Grid;
@@ -29,6 +31,8 @@ class PropertyForm
                             ->schema([
                                 Grid::make(3)
                                     ->schema([
+                                        TextInput::make('code')
+                                            ->label(__("Référence")),
                                         TextInput::make('title')
                                             ->label(__("Titre"))
                                             ->required(),
@@ -63,13 +67,11 @@ class PropertyForm
                                             ->required()
                                             ->native(false)
                                             ->label(__("État"))
-                                            ->options([1 => 'Brouillon', 2 => 'Actif', 3 => 'Caché', 4 => 'Vendu', 5 => 'Loué']),
+                                            ->default(2)
+                                            ->options(PropertyStatusEnum::toArray()),
                                         TextInput::make('area_m2')
                                             ->label(__("Surface m2"))
                                             ->numeric(),
-
-
-
                                         Textarea::make('description')
                                             ->label(__("Description"))
                                             ->columnSpanFull(),
@@ -83,15 +85,18 @@ class PropertyForm
 
                             ]),
                         Tab::make(__("Images"))
-
                             ->schema([
-                                Repeater::make('images')
-                                    ->relationship('images')
-                                    ->schema([
-                                        FileUpload::make('path')
-                                            ->label("Image")
-                                            ->image(),
-                                    ])->grid(4),
+                                SpatieMediaLibraryFileUpload::make('attachments')
+                                    ->label("Images")
+                                    ->multiple()
+                                    ->reorderable(),
+                                // Repeater::make('images')
+                                //     ->relationship('images')
+                                //     ->schema([
+                                //         FileUpload::make('path')
+                                //             ->label("Image")
+                                //             ->image(),
+                                //     ])->grid(4),
                             ]),
                         Tab::make('Options')
                             ->schema([

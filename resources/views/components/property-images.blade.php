@@ -1,6 +1,13 @@
+@php
+$mediaItems = $property->getMedia();
+$useMedia = $mediaItems->isNotEmpty();
+$images = $useMedia ? $mediaItems : $property->images;
+$imageUrls = $images->map(fn($img) => $useMedia ? $img->getUrl() : Storage::url($img->path))->toArray();
+@endphp
+
 <div class="max-w-7xl mx-auto" x-data="{
     currentIndex: 0,
-    images: {{ json_encode($images->map(fn($img) => Storage::url($img->path))->toArray()) }},
+    images: {{ json_encode($imageUrls) }},
 
     switchImage(index) {
         if (this.currentIndex !== index) {
@@ -20,21 +27,19 @@
     {{-- Main Image Container --}}
     <div class="relative mb-6 rounded-xl overflow-hidden bg-gray-100 shadow-sm group">
         <div class="relative h-96 md:h-[500px] lg:h-[500px]">
-            {{-- Image Display --}}
+
             @forelse ($images as $index => $image)
+            @php $url = $useMedia ? $image->getUrl() : Storage::url($image->path); @endphp
             <div x-show="currentIndex === {{ $index }}" x-transition:enter="transition ease-out duration-300"
                 x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
                 x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100"
                 x-transition:leave-end="opacity-0 scale-95" class="absolute inset-0">
-                <img src="{{ Storage::url($image->path) }}" class="w-full h-full object-cover"
-                    alt="Property image {{ $index + 1 }}">
+                <img src="{{ $url }}" class="w-full h-full object-cover" alt="Property image {{ $index + 1 }}">
             </div>
             @empty
-            {{-- Fallback if no images --}}
             <img src="/api/placeholder/1200/600" class="w-full h-full object-cover" alt="Placeholder image">
             @endforelse
 
-            {{-- Navigation Arrows --}}
             @if(count($images) > 1)
             <button @click="prevImage()"
                 class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -51,7 +56,6 @@
             </button>
             @endif
 
-            {{-- Image Counter --}}
             @if(count($images) > 1)
             <div
                 class="absolute bottom-4 right-4 bg-black/70 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
@@ -65,14 +69,14 @@
     @if(count($images) > 1)
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
         @foreach ($images as $index => $image)
+        @php $url = $useMedia ? $image->getUrl() : Storage::url($image->path); @endphp
         <div @click="switchImage({{ $index }})"
             :class="currentIndex === {{ $index }} ? 'ring-4 ring-blue-500 scale-95' : 'hover:ring-2 hover:ring-gray-300'"
             class="relative overflow-hidden rounded-lg cursor-pointer transition-all duration-300 shadow-md hover:shadow-xl group">
-            <img src="{{ Storage::url($image->path) }}"
+            <img src="{{ $url }}"
                 class="w-full h-24 md:h-28 object-cover transition-transform duration-300 group-hover:scale-110"
                 alt="Thumbnail {{ $index + 1 }}">
 
-            {{-- Overlay on active thumbnail --}}
             <div x-show="currentIndex === {{ $index }}" x-transition
                 class="absolute inset-0 bg-blue-500/20 flex items-center justify-center">
                 <svg class="w-8 h-8 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 20 20">
@@ -86,7 +90,6 @@
     </div>
     @endif
 
-    {{-- Placeholder thumbnails if no images --}}
     @if(count($images) === 0)
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-4">
         @for ($i = 0; $i < 4; $i++) <div class="overflow-hidden rounded-lg border border-gray-200 shadow-sm">

@@ -4,17 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
-class Property extends Model
+class Property extends Model implements HasMedia
 {
 
-    use SoftDeletes, HasSlug;
-
+    use SoftDeletes, HasSlug, InteractsWithMedia;
 
     protected $fillable = [
         'owner_id',
+        'code',
         'city_id',
         'title',
         'description',
@@ -50,6 +52,7 @@ class Property extends Model
         7 => 'Studio',
     ];
 
+
     // Relations
     public function owner()
     {
@@ -73,6 +76,8 @@ class Property extends Model
     {
         return $this->belongsToMany(Feature::class, 'property_feature');
     }
+
+
 
 
     public function getSlugOptions(): SlugOptions
