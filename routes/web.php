@@ -43,7 +43,7 @@ Route::get('/', function () {
         $query->where('price', '<=', request('price_max'));
     }
 
-    $properties = $query->paginate(20);
+    $properties = $query->paginate(50);
     $cities = City::all()->map(function ($city) {
         return ['value' => (string) $city->id, 'label' => $city->name];
     })->toArray();
