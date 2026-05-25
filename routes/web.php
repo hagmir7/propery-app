@@ -21,8 +21,6 @@ Route::get('/', function () {
 
     $query = Property::query();
 
-    $query->whereIn('status', [2,4,5]);
-
     if (request()->filled('city')) {
         $query->where('city_id', request('city'));
     }
@@ -43,7 +41,7 @@ Route::get('/', function () {
         $query->where('price', '<=', request('price_max'));
     }
 
-    $properties = $query->paginate(50);
+    $properties = $query->latest()->paginate(50);
     $cities = City::all()->map(function ($city) {
         return ['value' => (string) $city->id, 'label' => $city->name];
     })->toArray();

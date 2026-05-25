@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Properties\Tables;
 
+use App\Enums\PropertyStatusEnum;
 use App\Models\Property;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -20,6 +21,9 @@ class PropertiesTable
     {
         return $table
             ->columns([
+            TextColumn::make('code')
+                ->label(__('Référence'))
+                ->searchable(),
                 TextColumn::make('title')
                     ->label(__('Titre'))
                     ->searchable(),
@@ -49,7 +53,7 @@ class PropertiesTable
                 SelectColumn::make('status')
                     ->label(__("État"))
                     ->native(false)
-                    ->options([1 => 'Brouillon', 2 => 'Actif', 3 => 'Caché', 4 => 'Vendu', 5 => 'Loué']),
+                    ->options(PropertyStatusEnum::toArray()),
             TextColumn::make('created_at')
                 ->label(__("Créé le"))
                 ->dateTime()

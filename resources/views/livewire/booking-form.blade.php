@@ -46,7 +46,7 @@
         @enderror
     </div>
 
-      <button type="submit" wire:loading.attr="disabled" wire:target="submit" @if($property->status !== 2) disabled @endif
+      <button type="submit" wire:loading.attr="disabled" wire:target="submit" @if($property->status !== 1) disabled @endif
         class="w-full bg-blue-600 text-white py-3 rounded-md font-medium hover:bg-blue-700 transition-colors
         disabled:opacity-70 disabled:cursor-not-allowed">
         <span wire:loading.remove wire:target="submit">
