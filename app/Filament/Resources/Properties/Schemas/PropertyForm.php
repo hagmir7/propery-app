@@ -88,6 +88,9 @@ class PropertyForm
                             ->schema([
                                 SpatieMediaLibraryFileUpload::make('attachments')
                                     ->label("Images")
+                                    ->collection('images')        // ← must match registerMediaCollections()
+                                    ->disk('public')              // ← explicit disk
+                                    ->visibility('public')
                                     ->multiple()
                                     ->reorderable(),
                                 // Repeater::make('images')
