@@ -32,7 +32,7 @@
     </div>
 </section>
 <div class="max-w-7xl mx-auto px-4 py-6">
-    <h1 class="text-xl md:text-2xl font-bold mb-4">Locations Vacances Maroc</h1>
+    <h1 class="text-xl md:text-2xl font-bold mb-4">Vente et Location de Vacances au Maroc</h1>
 
     @if($properties && $properties->count() > 0)
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
