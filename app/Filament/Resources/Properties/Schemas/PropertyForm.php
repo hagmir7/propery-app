@@ -88,12 +88,8 @@ class PropertyForm
                             ->schema([
                                 SpatieMediaLibraryFileUpload::make('attachments')
                                     ->label("Images")
-                                    ->disk('public')
-                                    ->visibility('public')  // ← this is the only line you need to add
                                     ->multiple()
-                                    ->reorderable()
-                                    ->image()
-                                    ->maxFiles(20),
+                                    ->reorderable(),
                                 // Repeater::make('images')
                                 //     ->relationship('images')
                                 //     ->schema([
