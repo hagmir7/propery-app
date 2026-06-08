@@ -60,11 +60,11 @@ class Property extends Model implements HasMedia
     }
 
 
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('images')
-            ->useDisk('public');
-    }
+    // public function registerMediaCollections(): void
+    // {
+    //     $this->addMediaCollection('images')
+    //         ->useDisk('public');
+    // }
 
     public function city()
     {
