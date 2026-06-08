@@ -36,6 +36,11 @@ class PropertyResource extends Resource
         return PropertyForm::configure($schema);
     }
 
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->withMedia();
+    }
+
     public static function infolist(Schema $schema): Schema
     {
         return PropertyInfolist::configure($schema);
