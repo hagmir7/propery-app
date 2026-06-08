@@ -3,9 +3,7 @@
 namespace App\Filament\Resources\Properties\Schemas;
 
 use App\Enums\PropertyStatusEnum;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\KeyValue;
-use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
@@ -23,9 +21,9 @@ class PropertyForm
         return $schema
             ->components([
                 Tabs::make('Tabs')
-
                     ->columnSpanFull()
                     ->tabs([
+
                         Tab::make('Tab 1')
                             ->label(__("Propriété"))
                             ->schema([
@@ -42,7 +40,6 @@ class PropertyForm
                                             ->relationship('city', 'name')
                                             ->searchable()
                                             ->preload(),
-
                                         TextInput::make('price')
                                             ->label(__("Prix"))
                                             ->numeric()
@@ -52,17 +49,14 @@ class PropertyForm
                                             ->native(false)
                                             ->label(__("Type"))
                                             ->required(),
-
                                         Select::make('operation')
                                             ->label(__("Opération"))
                                             ->native(false)
                                             ->options([1 => 'Vente', 2 => 'Location']),
-
                                         Select::make('rent_type')
                                             ->label(__("Type de location"))
                                             ->native(false)
                                             ->options([1 => 'Quotidien', 2 => 'Mensuel']),
-
                                         Select::make('status')
                                             ->required()
                                             ->native(false)
@@ -77,30 +71,26 @@ class PropertyForm
                                             ->columnSpanFull(),
                                         RichEditor::make('content')
                                             ->label('Contenu')
-                                            ->extraInputAttributes(['style' => 'min-height: 20rem; max-height: 50vh; overflow-y: auto;'])
-                                            ->columnSpanFull()
+                                            ->extraInputAttributes([
+                                                'style' => 'min-height: 20rem; max-height: 50vh; overflow-y: auto;'
+                                            ])
                                             ->columnSpanFull(),
-                                    ])
-
-
+                                    ]),
                             ]),
+
                         Tab::make(__("Images"))
                             ->schema([
                                 SpatieMediaLibraryFileUpload::make('attachments')
                                     ->label("Images")
-                                    ->collection('images')        // ← must match registerMediaCollections()
-                                    ->disk('public')              // ← explicit disk
+                                    ->collection('images')
+                                    ->disk('public')
                                     ->visibility('public')
                                     ->multiple()
-                                    ->reorderable(),
-                                // Repeater::make('images')
-                                //     ->relationship('images')
-                                //     ->schema([
-                                //         FileUpload::make('path')
-                                //             ->label("Image")
-                                //             ->image(),
-                                //     ])->grid(4),
+                                    ->reorderable()
+                                    ->image()
+                                    ->maxFiles(20),
                             ]),
+
                         Tab::make('Options')
                             ->schema([
                                 TextInput::make('address')
@@ -111,15 +101,14 @@ class PropertyForm
                                 Select::make("features")
                                     ->label(__('Caractéristiques'))
                                     ->relationship('features', 'name')
-                                    ->preload()
                                     ->searchable()
                                     ->preload()
                                     ->multiple(),
                                 KeyValue::make('extra')
                                     ->columnSpanFull(),
                             ]),
-                    ])
 
+                    ]),
             ]);
     }
 }
