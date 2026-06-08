@@ -1,4 +1,5 @@
 <?php
+// app/Support/FlatPathGenerator.php
 
 namespace App\Support;
 
@@ -9,16 +10,28 @@ class FlatPathGenerator implements PathGenerator
 {
     public function getPath(Media $media): string
     {
+        if ($media->getCustomProperty('legacy_path')) {
+            return $media->id . '/';
+        }
+
         return '';
     }
 
     public function getPathForConversions(Media $media): string
     {
+        if ($media->getCustomProperty('legacy_path')) {
+            return $media->id . '/conversions/';
+        }
+
         return 'conversions/';
     }
 
     public function getPathForResponsiveImages(Media $media): string
     {
+        if ($media->getCustomProperty('legacy_path')) {
+            return $media->id . '/responsive/';
+        }
+
         return 'responsive/';
     }
 }
